@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+// These following two rules apply to both basic and flex grids
+.container {
+  max-width: 1080px;
+  width: 100%;
+  margin: auto;
+}
+// base column styling
+[class*='col-'] {
+  float: left;
+  border: 1px solid tomato;
+  min-height: 1px;
+  width: 8.3333%;
+  padding: 40px;
+}
+
+
+// =========== Basic Grid Rules for 12-column grid ========= //
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.67%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.67%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+// =============== Rules for Flex Grid ===============  //
+
+//Implement flex row to keep columns the same height
+.flex-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+//individual column percentages
+.f-col-1 {
+  flex: 8.33%;
+}
+.f-col-2 {
+  flex: 16.66%;
+}
+.f-col-3 {
+  flex: 25%;
+}
+.f-col-4 {
+  flex: 33.33%;
+}
+.f-col-5 {
+  flex: 41.67%;
+}
+.f-col-6 {
+  flex: 50%;
+}
+.f-col-7 {
+  flex: 58.33%;
+}
+.f-col-8 {
+  flex: 66.67%;
+}
+.f-col-9 {
+  flex: 75%;
+}
+.f-col-10 {
+  flex: 83.33%;
+}
+.f-col-11 {
+  flex: 91.66%;
+}
+.f-col-12 {
+  flex: 100%;
+}
