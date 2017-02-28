@@ -27,13 +27,21 @@ body {
     margin: auto;
     text-align: center;
     font-size: 1.5rem;
-    border-bottom: 2px solid #F4F4F4; }
+    border-bottom: 2px solid #F4F4F4;
+    transition: width ease-in 200ms; }
+    @media screen and (max-width: 500px) {
+      .hero-title {
+        width: 100%; } }
   .hero-body {
     margin: 20px auto;
     position: relative;
     padding: 10px 0;
-    width: 70%; }
-  .hero .hero-image {
+    width: 70%;
+    transition: width ease-in 200ms; }
+    @media screen and (max-width: 500px) {
+      .hero-body {
+        width: 100%; } }
+  .hero-image {
     display: block;
     width: 100%;
     min-height: 100vh;

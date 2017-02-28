@@ -21,14 +21,22 @@ section {
     text-align: center;
     font-size: 1.5rem;
     border-bottom: 2px solid $light;
+    transition: width ease-in 200ms;
+    @media screen and #{$mobile} {
+      width: 100%;
+    }
   }
   &-body {
     margin: 20px auto;
     position: relative;
     padding: 10px 0;
     width: 70%;
+    transition: width ease-in 200ms;
+    @media screen and #{$mobile} {
+      width: 100%;
+    }
   }
-  .hero-image {
+  &-image {
     display: block;
     width: 100%;
     min-height: 100vh;
