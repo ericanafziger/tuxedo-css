@@ -309,8 +309,13 @@ textarea {
   background: #CE4257;
   color: #F4F4F4; }
 
-.form-group {
-  margin: 20px 0; }
+.checkbox-light {
+  margin: 20px 0;
+  color: #F4F4F4; }
+
+.checkbox-dark {
+  margin: 20px 0;
+  color: #191919; }
 
 /* Base for label styling */
 [type="checkbox"]:not(:checked),
@@ -321,7 +326,11 @@ textarea {
 [type="checkbox"]:not(:checked) + label,
 [type="checkbox"]:checked + label {
   position: relative;
-  padding-left: 1.95em;
+  font-family: "Josefin Sans", sans-serif;
+  padding-left: 2.5rem;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-top: 4px;
   cursor: pointer; }
 
 /* checkbox aspect */
@@ -332,20 +341,34 @@ textarea {
   left: 0;
   top: 0;
   width: 1rem;
-  height: 1rem;
+  height: 1rem; }
+
+.checkbox-light [type="checkbox"]:not(:checked) + label:before,
+.checkbox-light [type="checkbox"]:checked + label:before {
   border: 3px solid #F4F4F4; }
+
+.checkbox-dark [type="checkbox"]:not(:checked) + label:before,
+.checkbox-dark [type="checkbox"]:checked + label:before {
+  border: 3px solid #191919; }
 
 /* checked mark aspect */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
   content: '';
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 1rem;
-  height: 1rem;
-  background: #F4F4F4;
+  top: 2px;
+  left: 2px;
+  width: 1.2rem;
+  height: 1.2rem;
   transition: all .2s; }
+
+.checkbox-light [type="checkbox"]:not(:checked) + label:after,
+.checkbox-light [type="checkbox"]:checked + label:after {
+  background: #F4F4F4; }
+
+.checkbox-dark [type="checkbox"]:not(:checked) + label:after,
+.checkbox-dark [type="checkbox"]:checked + label:after {
+  background: #191919; }
 
 /* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label:after {
@@ -360,14 +383,14 @@ textarea {
 [type="checkbox"]:disabled:not(:checked) + label:before,
 [type="checkbox"]:disabled:checked + label:before {
   box-shadow: none;
-  border-color: #bbb;
-  background-color: #ddd; }
+  border-color: #9B9B9B;
+  background-color: #9B9B9B; }
 
 [type="checkbox"]:disabled:checked + label:after {
-  color: #999; }
+  color: #9B9B9B; }
 
 [type="checkbox"]:disabled + label {
-  color: #aaa; }
+  color: #9B9B9B; }
 
 .bg-dark {
   background: #191919; }

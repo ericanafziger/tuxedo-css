@@ -122,8 +122,13 @@ textarea {
   color: $light;
 }
 
-.form-group {
+.checkbox-light {
   margin: 20px 0;
+  color: $light;
+}
+.checkbox-dark {
+  margin: 20px 0;
+  color: $dark;
 }
 
 //Checkbox Styling
@@ -136,7 +141,11 @@ textarea {
 [type="checkbox"]:not(:checked) + label,
 [type="checkbox"]:checked + label {
   position: relative;
-  padding-left: 1.95em;
+  font-family: $header-font;
+  padding-left: 2.5rem;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-top: 4px;
   cursor: pointer;
 }
 
@@ -147,18 +156,32 @@ textarea {
   position: absolute;
   left: 0; top: 0;
   width: 1rem; height: 1rem;
+}
+.checkbox-light [type="checkbox"]:not(:checked) + label:before,
+.checkbox-light [type="checkbox"]:checked + label:before {
   border: 3px solid $light;
+}
+.checkbox-dark [type="checkbox"]:not(:checked) + label:before,
+.checkbox-dark [type="checkbox"]:checked + label:before {
+  border: 3px solid $dark;
 }
 /* checked mark aspect */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
   content: '';
   position: absolute;
-  top: 3px; left: 3px;
-  width: 1rem;
-  height: 1rem;
-  background: $light;
+  top: 2px; left: 2px;
+  width: 1.2rem;
+  height: 1.2rem;
   transition: all .2s;
+}
+.checkbox-light [type="checkbox"]:not(:checked) + label:after,
+.checkbox-light [type="checkbox"]:checked + label:after {
+  background: $light;
+}
+.checkbox-dark [type="checkbox"]:not(:checked) + label:after,
+.checkbox-dark [type="checkbox"]:checked + label:after {
+  background: $dark;
 }
 /* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label:after {
@@ -173,22 +196,12 @@ textarea {
 [type="checkbox"]:disabled:not(:checked) + label:before,
 [type="checkbox"]:disabled:checked + label:before {
   box-shadow: none;
-  border-color: #bbb;
-  background-color: #ddd;
+  border-color: $md-grey;
+  background-color: $md-grey;
 }
 [type="checkbox"]:disabled:checked + label:after {
-  color: #999;
+  color: $md-grey;
 }
 [type="checkbox"]:disabled + label {
-  color: #aaa;
+  color: $md-grey;
 }
-// /* accessibility */
-// [type="checkbox"]:checked:focus + label:before,
-// [type="checkbox"]:not(:checked):focus + label:before {
-//   border: 2px dotted blue;
-// }
-
-// /* hover style just for information */
-// label:hover:before {
-//   border: 2px solid #4778d9!important;
-// }
