@@ -333,7 +333,7 @@ textarea {
   padding-top: 4px;
   cursor: pointer; }
 
-/* checkbox aspect */
+/* checkbox styling */
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before {
   content: '';
@@ -351,7 +351,7 @@ textarea {
 .checkbox-dark [type="checkbox"]:checked + label:before {
   border: 3px solid #191919; }
 
-/* checked mark aspect */
+/* checked mark styling */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
   content: '';
@@ -386,6 +386,87 @@ textarea {
   color: #9B9B9B; }
 
 [type="checkbox"]:disabled + label {
+  color: #9B9B9B; }
+
+.radio-light {
+  margin: 20px 0;
+  color: #F4F4F4; }
+
+.radio-dark {
+  margin: 20px 0;
+  color: #191919; }
+
+/* Base for label styling */
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  left: -9999px; }
+
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative;
+  font-family: "Josefin Sans", sans-serif;
+  padding-left: 2.5rem;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-top: 4px;
+  cursor: pointer; }
+
+/* radio button styling */
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%; }
+
+.radio-light [type="radio"]:not(:checked) + label:before,
+.radio-light [type="radio"]:checked + label:before {
+  border: 3px solid #F4F4F4; }
+
+.radio-dark [type="radio"]:not(:checked) + label:before,
+.radio-dark [type="radio"]:checked + label:before {
+  border: 3px solid #191919; }
+
+/* checked mark styling */
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 100%;
+  transition: width ease-in 200ms; }
+
+.radio-light [type="radio"]:not(:checked) + label:after,
+.radio-light [type="radio"]:checked + label:after {
+  background: #F4F4F4; }
+
+.radio-dark [type="radio"]:not(:checked) + label:after,
+.radio-dark [type="radio"]:checked + label:after {
+  background: #191919; }
+
+/* checked mark aspect changes */
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  width: 0;
+  height: 0; }
+
+/* disabled radio */
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
+  border-color: #9B9B9B;
+  background-color: #9B9B9B; }
+
+[type="radio"]:disabled:checked + label:after {
+  color: #9B9B9B; }
+
+[type="radio"]:disabled + label {
   color: #9B9B9B; }
 
 .bg-dark {
