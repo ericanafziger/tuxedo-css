@@ -3,22 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Tuxedo CSS</title>
-    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="container">
-      <form>
-        <header class="header-light">Login</header>
-        <input type="text" class="input_border-light" placeholder="Email Address">
-        <input type="password" class="input_border-light" placeholder="Password">
-        <!-- <select class="">
+
+    <div class="hero">
+      <!-- <div id="three-canvas"></div> -->
+      <div class="hero-body">
+
+        <form>
+          <header class="header-light">Login</header>
+          <input type="text" class="input_border-light" placeholder="Email Address">
+          <input type="password" class="input_border-light" placeholder="Password">
+          <div class="f-row">
+            <button type="button" class="btn-ghost f-col-6">Login</button>
+            <button type="button" class="btn-ghost f-col-6">Login</button>
+          </div>
+
+          <!-- <select class="">
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
         </select>
-        <textarea name="name" rows="8" cols="40"></textarea> -->
-
+        <textarea name="name" rows="8" cols="40"></textarea>-->
       </form>
+
+			</div>
     </div>
+
+
+    <script src="js/three.js"></script>
+    <script src="js/three-render.js"></script>
   </body>
 </html>

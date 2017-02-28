@@ -1,7 +1,7 @@
 form {
-  max-width: 700px;
+  max-width: 600px;
   margin: auto;
-  background: $black;
+  background: transparentize($black, 0.2);
   padding: 40px;
 }
 .header-light {
@@ -23,8 +23,6 @@ input {
   border: 2px solid $black;
   font-size: 1rem;
   padding-left: 20px;
-  font-weight: 700;
-  font-style: italic;
   color: $white;
   background: none;
   font-family: $header-font;

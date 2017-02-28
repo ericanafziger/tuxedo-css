@@ -9,7 +9,6 @@
   float: left;
   min-height: 1px;
   padding: 20px;
-  // border: 1px solid tomato;
 }
 
 
@@ -65,44 +64,50 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+[class*='f-col-'] {
+  min-height: 1px;
+  margin: 0 .33% 10px .33%;
+  border: 1px solid tomato;
 }
 
 //individual column percentages
 .f-col-1 {
-  flex: 8.33% 1;
+  flex: 1 8%;
 }
 .f-col-2 {
-  flex: 16.66%;
+  flex: 1 16.33%;
 }
 .f-col-3 {
-  flex: 25%;
+  flex: 1 24.66%;
 }
 .f-col-4 {
-  flex: 33.33%;
+  flex: 1 33%;
 }
 .f-col-5 {
-  flex: 41.67%;
+  flex: 1 41.33%;
 }
 .f-col-6 {
-  flex: 50%;
+  flex: 1 49.66%;
 }
 .f-col-7 {
-  flex: 58.33%;
+  flex: 1 58%;
 }
 .f-col-8 {
-  flex: 66.67%;
+  flex: 1 66.33%;
 }
 .f-col-9 {
-  flex: 75%;
+  flex: 1 74.66%;
 }
 .f-col-10 {
-  flex: 83.33%;
+  flex: 1 83%;
 }
 .f-col-11 {
-  flex: 91.66%;
+  flex: 1 91.33%;
 }
 .f-col-12 {
-  flex: 100%;
+  flex: 1 99.66%;
 }
 
 [class*='f-col-'] {

@@ -1,0 +1,38 @@
+[class*="btn"] {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 15px 40px;
+  transition: background ease-in-out 200ms, border ease-in-out 200ms;
+  &:hover, &:focus {
+    cursor: pointer;
+    outline: none;
+  }
+}
+.btn-light {
+  color: $black;
+  background: $white;
+  border: 2px solid $white;
+  &:hover {
+    background: $black;
+    border-color: $black;
+    color: $white;
+  }
+}
+.btn-ghost {
+  background: none;
+  border: 2px solid $white;
+  color: $white;
+  font-size: 1rem;
+  transition: all ease-in-out 100ms;
+  font-weight: 500;
+  &:hover {
+    cursor: pointer;
+    background: $white;
+    color: $black;
+    outline: none;
+  }
+  &:focus, &:active {
+    outline: none;
+  }
+}
