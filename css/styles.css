@@ -359,7 +359,8 @@ textarea {
   top: 1px;
   left: 1px;
   width: 1.3rem;
-  height: 1.3rem; }
+  height: 1.3rem;
+  transition: width ease-in 200ms; }
 
 .checkbox-light [type="checkbox"]:not(:checked) + label:after,
 .checkbox-light [type="checkbox"]:checked + label:after {
@@ -371,7 +372,9 @@ textarea {
 
 /* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label:after {
-  opacity: 0; }
+  opacity: 0;
+  width: 0;
+  height: 0; }
 
 /* disabled checkbox */
 [type="checkbox"]:disabled:not(:checked) + label:before,
