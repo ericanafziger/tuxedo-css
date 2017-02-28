@@ -11,4 +11,10 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .hero-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

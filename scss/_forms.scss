@@ -1,7 +1,9 @@
 form {
   max-width: 600px;
   margin: auto;
-  background: transparentize($black, 0.2);
+  // background: transparent url('../img/sea.jpg');
+  background: transparentize($black, 0.4);
+  background-size: cover;
   padding: 40px;
 }
 .header-light {

@@ -9,7 +9,7 @@
   float: left;
   min-height: 1px;
   max-width: 100%;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 
@@ -82,7 +82,7 @@
 }
 
 // flex classes to add to flex columns
-[class*='flex-center'] {
+[class*='flex-center'], [class*='flex-end'] {
   display: flex;
 }
 .flex-center {
@@ -95,9 +95,11 @@
 .flex-center-v {
   align-items: center;
 }
-.flex-end {
-  display: flex;
-  align-items: flex-end;;
+.flex-end-v {
+  align-items: flex-end;
+}
+.flex-end-h {
+  justify-content: flex-end;
 }
 
 [class*='f-col-'] {

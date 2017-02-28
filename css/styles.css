@@ -18,6 +18,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+  .hero .hero-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
 
 canvas {
   display: block; }
@@ -34,7 +39,7 @@ canvas {
   float: left;
   min-height: 1px;
   max-width: 100%;
-  padding: 20px; }
+  padding: 10px 20px; }
 
 .row:before,
 .row:after {
@@ -95,7 +100,7 @@ canvas {
 .f-col-4 {
   flex: 4; }
 
-[class*='flex-center'] {
+[class*='flex-center'], [class*='flex-end'] {
   display: flex; }
 
 .flex-center {
@@ -108,9 +113,11 @@ canvas {
 .flex-center-v {
   align-items: center; }
 
-.flex-end {
-  display: flex;
+.flex-end-v {
   align-items: flex-end; }
+
+.flex-end-h {
+  justify-content: flex-end; }
 
 @media screen and (max-width: 760px) {
   [class*='f-col-'] {
@@ -128,7 +135,6 @@ button {
   font-size: 1rem;
   height: 50px;
   font-weight: 500;
-  margin: 0 20px;
   padding: 15px 40px;
   transition: background ease-in-out 200ms, border ease-in-out 200ms; }
   button:hover, button:focus {
@@ -186,7 +192,8 @@ button {
 form {
   max-width: 600px;
   margin: auto;
-  background: rgba(25, 25, 25, 0.8);
+  background: rgba(25, 25, 25, 0.6);
+  background-size: cover;
   padding: 40px; }
 
 .header-light {
