@@ -4,6 +4,23 @@ form {
   background-size: cover;
   padding: 40px;
 }
+[class*="form-divide"] {
+  margin: 30px 0;
+  height: 1px;
+}
+.form-divide-light {
+  border-bottom: 1px solid $light;
+}
+.form-divide-dark {
+  border-bottom: 1px solid $dark;
+}
+.form-divide-pop {
+  border-bottom: 1px solid $color-pop;
+}
+label {
+  font-size: 1rem;
+  font-family: $header-font;
+}
 [class*="form-header"] {
   font-size: 3rem;
   padding: 2rem;

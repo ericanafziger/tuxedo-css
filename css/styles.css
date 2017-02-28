@@ -199,6 +199,23 @@ form {
   background-size: cover;
   padding: 40px; }
 
+[class*="form-divide"] {
+  margin: 30px 0;
+  height: 1px; }
+
+.form-divide-light {
+  border-bottom: 1px solid #F4F4F4; }
+
+.form-divide-dark {
+  border-bottom: 1px solid #191919; }
+
+.form-divide-pop {
+  border-bottom: 1px solid #CE4257; }
+
+label {
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif; }
+
 [class*="form-header"] {
   font-size: 3rem;
   padding: 2rem;
