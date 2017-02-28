@@ -1,0 +1,51 @@
+form {
+  max-width: 700px;
+  margin: auto;
+  background: $black;
+  padding: 40px;
+}
+.header-light {
+  color: $white;
+  font-size: 3rem;
+  padding: 2rem;
+  border-bottom: 1px solid $white;
+  font-family: $header-font;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+// Input Styling
+input {
+  display: block;
+  margin: 40px 0;
+  height: 3rem;
+  max-width: 100%;
+  width: 100%;
+  border: 2px solid $black;
+  font-size: 1rem;
+  padding-left: 20px;
+  font-weight: 700;
+  font-style: italic;
+  color: $white;
+  background: none;
+  font-family: $header-font;
+  &:focus {
+    outline: none;
+    font-style: normal;
+  }
+}
+.input_border-light {
+  border: 3px solid $light-grey;
+}
+.input_border-pop {
+  border: 3px solid $color-pop;
+}
+
+// Select Styling
+select {
+  display: block;
+}
+
+// Textarea Styling
+textarea {
+  display: block;
+}

@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700,700i");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
+
+body {
+  font-size: 16px;
+  line-height: 1; }
 
 .container {
   max-width: 1080px;
@@ -103,5 +108,50 @@
 @media screen and (max-width: 500px) {
   [class*='col-'] {
     width: 100%; } }
+
+form {
+  max-width: 700px;
+  margin: auto;
+  background: #191919;
+  padding: 40px; }
+
+.header-light {
+  color: #F4F4F4;
+  font-size: 3rem;
+  padding: 2rem;
+  border-bottom: 1px solid #F4F4F4;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  margin-bottom: 3rem; }
+
+input {
+  display: block;
+  margin: 40px 0;
+  height: 3rem;
+  max-width: 100%;
+  width: 100%;
+  border: 2px solid #191919;
+  font-size: 1rem;
+  padding-left: 20px;
+  font-weight: 700;
+  font-style: italic;
+  color: #F4F4F4;
+  background: none;
+  font-family: "Josefin Sans", sans-serif; }
+  input:focus {
+    outline: none;
+    font-style: normal; }
+
+.input_border-light {
+  border: 3px solid #F4F4F4; }
+
+.input_border-pop {
+  border: 3px solid #CE4257; }
+
+select {
+  display: block; }
+
+textarea {
+  display: block; }
 
 /*# sourceMappingURL=styles.css.map */
