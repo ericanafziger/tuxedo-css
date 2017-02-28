@@ -8,6 +8,7 @@
 [class*='col-'] {
   float: left;
   min-height: 1px;
+  max-width: 100%;
   padding: 20px;
 }
 
@@ -64,53 +65,45 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-[class*='f-col-'] {
-  min-height: 1px;
-  margin: 0 .33% 10px .33%;
-  border: 1px solid tomato;
 }
 
 //individual column percentages
 .f-col-1 {
-  flex: 1 8%;
+  flex: 1;
 }
 .f-col-2 {
-  flex: 1 16.33%;
+  flex: 2;
 }
 .f-col-3 {
-  flex: 1 24.66%;
+  flex: 3;
 }
 .f-col-4 {
-  flex: 1 33%;
+  flex: 4;
 }
-.f-col-5 {
-  flex: 1 41.33%;
+
+// flex classes to add to flex columns
+[class*='flex-center'] {
+  display: flex;
 }
-.f-col-6 {
-  flex: 1 49.66%;
+.flex-center {
+  justify-content: center;
+  align-items: center;
 }
-.f-col-7 {
-  flex: 1 58%;
+.flex-center-h {
+  justify-content: center;
 }
-.f-col-8 {
-  flex: 1 66.33%;
+.flex-center-v {
+  align-items: center;
 }
-.f-col-9 {
-  flex: 1 74.66%;
-}
-.f-col-10 {
-  flex: 1 83%;
-}
-.f-col-11 {
-  flex: 1 91.33%;
-}
-.f-col-12 {
-  flex: 1 99.66%;
+.flex-end {
+  display: flex;
+  align-items: flex-end;;
 }
 
 [class*='f-col-'] {
+  @media screen and #{$tablet} {
+    flex: 50%;
+  }
   @media screen and #{$mobile} {
     flex: 100%;
   }

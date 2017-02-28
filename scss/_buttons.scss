@@ -1,7 +1,9 @@
-[class*="btn"] {
+button {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
+  height: 50px;
   font-weight: 500;
+  margin: 0 20px;
   padding: 15px 40px;
   transition: background ease-in-out 200ms, border ease-in-out 200ms;
   &:hover, &:focus {
@@ -19,7 +21,17 @@
     color: $white;
   }
 }
-.btn-ghost {
+.btn-dark {
+  color: $white;
+  background: $black;
+  border: 2px solid $black;
+  &:hover {
+    background: $white;
+    border-color: $white;
+    color: $black;
+  }
+}
+.btn-light-ghost {
   background: none;
   border: 2px solid $white;
   color: $white;
@@ -30,6 +42,23 @@
     cursor: pointer;
     background: $white;
     color: $black;
+    outline: none;
+  }
+  &:focus, &:active {
+    outline: none;
+  }
+}
+.btn-dark-ghost {
+  background: none;
+  border: 2px solid $black;
+  color: $black;
+  font-size: 1rem;
+  transition: all ease-in-out 100ms;
+  font-weight: 500;
+  &:hover {
+    cursor: pointer;
+    background: $black;
+    color: $white;
     outline: none;
   }
   &:focus, &:active {
