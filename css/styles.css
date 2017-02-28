@@ -263,7 +263,16 @@ select {
   display: block; }
 
 textarea {
-  display: block; }
+  font-family: "Josefin Sans", sans-serif;
+  display: block;
+  margin: 40px 0;
+  max-width: 100%;
+  max-height: 400px;
+  width: 100%;
+  font-size: 1rem;
+  padding: 20px 0 0 20px; }
+  textarea:focus, textarea:active {
+    outline: none; }
 
 .bg-dark {
   background: #191919; }

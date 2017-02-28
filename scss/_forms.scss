@@ -70,5 +70,15 @@ select {
 
 // Textarea Styling
 textarea {
+  font-family: $header-font;
   display: block;
+  margin: 40px 0;
+  max-width: 100%;
+  max-height: 400px;
+  width: 100%;
+  font-size: 1rem;
+  padding: 20px 0 0 20px;
+  &:focus, &:active {
+    outline: none;
+  }
 }
