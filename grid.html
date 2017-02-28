@@ -8,17 +8,80 @@
   </head>
   <body>
     <div class="container">
+      <h1>Flex Grid Example</h1>
+
       <div class="f-row">
-        <div class="f-col-2 flex-center-h">
-          <button class="btn-light-ghost">Save</button>
+        <div class="f-col-1 flex-center bg-dark">
+          <h2 class="text-light">Flex 1</h2>
         </div>
-        <div class="f-col-2 flex-center-h">
-          <button class="btn-light">Save</button>
+        <div class="f-col-2 flex-center bg-t-pop">
+          <h2>Flex 2</h2>
         </div>
-        <div class="f-col-2 flex-center-h">
-          <button class="btn-dark-ghost">Save</button>
+        <div class="f-col-3 flex-center bg-pop">
+          <h2>Flex 3</h2>
+        </div>
+        <div class="f-col-4 flex-center bg-t-dark">
+          <h2>Flex 4</h2>
         </div>
       </div>
+
+      <div class="f-row">
+        <div style="height: 400px" class="f-col-1 bg-t-dark">
+          <p class="text-light">Content is placed at <code>flex-start</code> by default if no flex direction is specified</p>
+          <br>
+          <button class="btn-ghost-light">Flex Start</button>
+        </div>
+        <div class="f-col-1 flex-center bg-light">
+          <p>This content is positioned on the horizontal and vertical center axis with <code>.flex-center</code></p>
+          <br>
+          <button class="btn-ghost-dark">Flex Center</button>
+        </div>
+        <div class="f-col-1 flex-center-h bg-dark">
+          <p class="text-light">This content is positioned on the horizontal center axis, but not the vertical center axis with <code>.flex-center-h</code></p>
+          <br>
+          <button class="btn-ghost-light">Flex Center H</button>
+        </div>
+        <div class="f-col-2 flex-center-v bg-pop">
+          <p style="width: 70%"class="text-light">
+            Use <code>.flex-center-v</code> to position items on the center of the vercal axis but not the horizontal axis.
+          </p>
+          <br>
+          <button class="btn-ghost-light">Flex Center Vertical</button>
+        </div>
+      </div>
+
+      <div class="f-row">
+        <div style="height: 100px" class="f-col-1 bg-dark flex-center">
+          <p class="text-light">
+            If there is only one item in a row it will stretch to take up the entire width!
+          </p>
+        </div>
+      </div>
+
+      <div class="f-row">
+        <div class="f-col-1 bg-light flex-end">
+          <p style="width: 70%"class="text-dark">
+            This content is positioned on the end of the horizontal axis and the beginning of the vercal axis with <code>.flex-end</code>
+          </p>
+          <br>
+          <button class="btn-dark">Flex End</button>
+        </div>
+        <div style="height: 200px"class="f-col-1 bg-t-pop flex-end-v">
+          <p style="width: 70%"class="text-light">
+            Use <code>.flex-end-v</code> to position items on the end of the vercal axis but the start of the horizontal axis.
+          </p>
+          <br>
+          <button class="btn-light">Flex End V</button>
+        </div>
+        <div class="f-col-1 bg-t-dark flex-end-h">
+          <p style="width: 70%"class="text-light">
+            This content is positioned on the end of the horizontal axis but at the beginning of the vercal axis with <code>.flex-end-h</code>
+          </p>
+          <br>
+          <button class="btn-light">Flex End H</button>
+        </div>
+      </div>
+
     </div>
 
 

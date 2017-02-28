@@ -90,19 +90,28 @@
   align-items: center;
 }
 .flex-center-h {
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
 }
 .flex-center-v {
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 .flex-end-v {
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 .flex-end-h {
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.flex-end {
   justify-content: flex-end;
+  align-items: flex-end;
 }
 
 [class*='f-col-'] {
+  flex-direction: column;
   @media screen and #{$tablet} {
     flex: 50%;
   }
