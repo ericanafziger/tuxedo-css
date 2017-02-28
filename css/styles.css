@@ -196,8 +196,10 @@ button {
 form {
   max-width: 600px;
   margin: auto;
+  max-height: 90vh;
   background-size: cover;
-  padding: 40px; }
+  padding: 40px;
+  overflow: auto; }
 
 [class*="form-divide"] {
   margin: 30px 0;
@@ -308,7 +310,7 @@ select {
 
 textarea {
   border: none;
-  max-height: 400px;
+  max-height: 300px;
   padding: 20px 0 0 20px; }
 
 .textarea-light {
