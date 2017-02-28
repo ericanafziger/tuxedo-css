@@ -1,19 +1,23 @@
 form {
   max-width: 600px;
   margin: auto;
-  // background: transparent url('../img/sea.jpg');
-  background: transparentize($black, 0.4);
   background-size: cover;
   padding: 40px;
 }
-.header-light {
-  color: $white;
+[class*="form-header"] {
   font-size: 3rem;
   padding: 2rem;
-  border-bottom: 1px solid $white;
   font-family: $header-font;
   text-align: center;
   margin-bottom: 3rem;
+}
+.form-header-dark {
+  color: $dark;
+  border-bottom: 2px solid $dark;
+}
+.form-header-light {
+  color: $light;
+  border-bottom: 2px solid $light;
 }
 // Input Styling
 input {
@@ -22,10 +26,8 @@ input {
   height: 3rem;
   max-width: 100%;
   width: 100%;
-  border: 2px solid $black;
   font-size: 1rem;
   padding-left: 20px;
-  color: $white;
   background: none;
   font-family: $header-font;
   &:focus {
@@ -33,11 +35,32 @@ input {
     font-style: normal;
   }
 }
-.input_border-light {
-  border: 3px solid $light-grey;
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $md-grey;
 }
-.input_border-pop {
+::-moz-placeholder { /* Firefox 19+ */
+  color: $md-grey;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $md-grey;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $md-grey;
+}
+.input-light {
+  border: 3px solid $light;
+  background: $light;
+  color: $dark;
+}
+.input-dark {
+  border: 3px solid $dark;
+  background: $dark;
+  color: $light;
+}
+.input-pop {
   border: 3px solid $color-pop;
+  background: $color-pop;
+  color: $light;
 }
 
 // Select Styling

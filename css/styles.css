@@ -159,6 +159,15 @@ button {
     border-color: #F4F4F4;
     color: #191919; }
 
+.btn-pop {
+  color: #F4F4F4;
+  background: #CE4257;
+  border: 2px solid #CE4257; }
+  .btn-pop:hover {
+    background: #F4F4F4;
+    border-color: #F4F4F4;
+    color: #191919; }
+
 .btn-light-ghost {
   background: none;
   border: 2px solid #F4F4F4;
@@ -192,18 +201,23 @@ button {
 form {
   max-width: 600px;
   margin: auto;
-  background: rgba(25, 25, 25, 0.6);
   background-size: cover;
   padding: 40px; }
 
-.header-light {
-  color: #F4F4F4;
+[class*="form-header"] {
   font-size: 3rem;
   padding: 2rem;
-  border-bottom: 1px solid #F4F4F4;
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   margin-bottom: 3rem; }
+
+.form-header-dark {
+  color: #191919;
+  border-bottom: 2px solid #191919; }
+
+.form-header-light {
+  color: #F4F4F4;
+  border-bottom: 2px solid #F4F4F4; }
 
 input {
   display: block;
@@ -211,26 +225,67 @@ input {
   height: 3rem;
   max-width: 100%;
   width: 100%;
-  border: 2px solid #191919;
   font-size: 1rem;
   padding-left: 20px;
-  color: #F4F4F4;
   background: none;
   font-family: "Josefin Sans", sans-serif; }
   input:focus {
     outline: none;
     font-style: normal; }
 
-.input_border-light {
-  border: 3px solid #F4F4F4; }
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #C8C8C8; }
 
-.input_border-pop {
-  border: 3px solid #CE4257; }
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #C8C8C8; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #C8C8C8; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #C8C8C8; }
+
+.input-light {
+  border: 3px solid #F4F4F4;
+  background: #F4F4F4;
+  color: #191919; }
+
+.input-dark {
+  border: 3px solid #191919;
+  background: #191919;
+  color: #F4F4F4; }
+
+.input-pop {
+  border: 3px solid #CE4257;
+  background: #CE4257;
+  color: #F4F4F4; }
 
 select {
   display: block; }
 
 textarea {
   display: block; }
+
+.bg-dark {
+  background: #191919; }
+
+.bg-light {
+  background: #F4F4F4; }
+
+.bg-t-light {
+  background: rgba(244, 244, 244, 0.7); }
+
+.bg-t-dark {
+  background: rgba(25, 25, 25, 0.7); }
+
+.text-dark {
+  color: #191919; }
+
+.text-light {
+  color: #F4F4F4; }
 
 /*# sourceMappingURL=styles.css.map */

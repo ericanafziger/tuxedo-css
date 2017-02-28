@@ -11,36 +11,46 @@ button {
   }
 }
 .btn-light {
-  color: $black;
-  background: $white;
-  border: 2px solid $white;
+  color: $dark;
+  background: $light;
+  border: 2px solid $light;
   &:hover {
-    background: $black;
-    border-color: $black;
-    color: $white;
+    background: $dark;
+    border-color: $dark;
+    color: $light;
   }
 }
 .btn-dark {
-  color: $white;
-  background: $black;
-  border: 2px solid $black;
+  color: $light;
+  background: $dark;
+  border: 2px solid $dark;
   &:hover {
-    background: $white;
-    border-color: $white;
-    color: $black;
+    background: $light;
+    border-color: $light;
+    color: $dark;
+  }
+}
+.btn-pop {
+  color: $light;
+  background: $color-pop;
+  border: 2px solid $color-pop;
+  &:hover {
+    background: $light;
+    border-color: $light;
+    color: $dark;
   }
 }
 .btn-light-ghost {
   background: none;
-  border: 2px solid $white;
-  color: $white;
+  border: 2px solid $light;
+  color: $light;
   font-size: 1rem;
   transition: all ease-in-out 100ms;
   font-weight: 500;
   &:hover {
     cursor: pointer;
-    background: $white;
-    color: $black;
+    background: $light;
+    color: $dark;
     outline: none;
   }
   &:focus, &:active {
@@ -49,15 +59,15 @@ button {
 }
 .btn-dark-ghost {
   background: none;
-  border: 2px solid $black;
-  color: $black;
+  border: 2px solid $dark;
+  color: $dark;
   font-size: 1rem;
   transition: all ease-in-out 100ms;
   font-weight: 500;
   &:hover {
     cursor: pointer;
-    background: $black;
-    color: $white;
+    background: $dark;
+    color: $light;
     outline: none;
   }
   &:focus, &:active {

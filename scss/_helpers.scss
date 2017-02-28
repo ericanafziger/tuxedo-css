@@ -1,0 +1,25 @@
+// Background Helpers
+
+.bg-dark {
+  background: $dark;
+}
+.bg-light {
+  background: $light;
+}
+.bg-t-light {
+  background: transparentize($light, 0.3);
+}
+.bg-t-dark {
+  background: transparentize($dark, 0.3);
+}
+
+
+
+// Text Helpers
+
+.text-dark {
+  color: $dark;
+}
+.text-light {
+  color: $light;
+}
