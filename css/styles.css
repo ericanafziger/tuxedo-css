@@ -51,7 +51,7 @@ p {
   .hero-image {
     display: block;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     object-fit: cover; }
 
 canvas {
@@ -63,7 +63,8 @@ canvas {
 .container {
   max-width: 1080px;
   width: 100%;
-  margin: auto; }
+  margin: auto;
+  padding: 40px 0; }
 
 [class*='col-'] {
   float: left;
@@ -201,8 +202,8 @@ button {
 
 .btn-pop {
   color: #F4F4F4;
-  background: #CE4257;
-  border: 2px solid #CE4257; }
+  background: #2A7F62;
+  border: 2px solid #2A7F62; }
   .btn-pop:hover {
     background: #F4F4F4;
     border-color: #F4F4F4;
@@ -226,8 +227,8 @@ button {
     color: #F4F4F4; }
 
 .btn-ghost-pop {
-  border: 2px solid #CE4257;
-  color: #CE4257; }
+  border: 2px solid #2A7F62;
+  color: #2A7F62; }
   .btn-ghost-pop:hover {
     border: 2px solid #F4F4F4;
     background: #F4F4F4;
@@ -250,7 +251,7 @@ form {
   border-bottom: 2px solid #191919; }
 
 .form-divide-pop {
-  border-bottom: 2px solid #CE4257; }
+  border-bottom: 2px solid #2A7F62; }
 
 label {
   font-size: 1rem;
@@ -313,8 +314,8 @@ input {
   color: #F4F4F4; }
 
 .input-pop {
-  border: 3px solid #CE4257;
-  background: #CE4257;
+  border: 3px solid #2A7F62;
+  background: #2A7F62;
   color: #F4F4F4; }
 
 select {
@@ -342,8 +343,8 @@ select {
   color: #F4F4F4; }
 
 .select-pop {
-  border: #CE4257;
-  background-color: #CE4257;
+  border: #2A7F62;
+  background-color: #2A7F62;
   color: #F4F4F4; }
 
 textarea {
@@ -362,8 +363,8 @@ textarea {
   color: #F4F4F4; }
 
 .textarea-pop {
-  border: 3px solid #CE4257;
-  background: #CE4257;
+  border: 3px solid #2A7F62;
+  background: #2A7F62;
   color: #F4F4F4; }
 
 .checkbox-light {
@@ -533,7 +534,7 @@ textarea {
   background: #F4F4F4; }
 
 .bg-pop {
-  background: #CE4257; }
+  background: #2A7F62; }
 
 .bg-t-light {
   background: rgba(244, 244, 244, 0.7); }
@@ -542,7 +543,7 @@ textarea {
   background: rgba(25, 25, 25, 0.7); }
 
 .bg-t-pop {
-  background: rgba(206, 66, 87, 0.7); }
+  background: rgba(42, 127, 98, 0.7); }
 
 .text-dark {
   color: #191919; }
@@ -551,6 +552,6 @@ textarea {
   color: #F4F4F4; }
 
 .text-pop {
-  color: #CE4257; }
+  color: #2A7F62; }
 
 /*# sourceMappingURL=styles.css.map */
