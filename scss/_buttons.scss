@@ -40,37 +40,31 @@ button {
     color: $dark;
   }
 }
-.btn-light-ghost {
+[class*="btn-ghost"] {
   background: none;
+}
+.btn-ghost-light {
   border: 2px solid $light;
   color: $light;
-  font-size: 1rem;
-  transition: all ease-in-out 100ms;
-  font-weight: 500;
   &:hover {
-    cursor: pointer;
     background: $light;
     color: $dark;
-    outline: none;
-  }
-  &:focus, &:active {
-    outline: none;
   }
 }
-.btn-dark-ghost {
-  background: none;
+.btn-ghost-dark {
   border: 2px solid $dark;
   color: $dark;
-  font-size: 1rem;
-  transition: all ease-in-out 100ms;
-  font-weight: 500;
   &:hover {
-    cursor: pointer;
     background: $dark;
     color: $light;
-    outline: none;
   }
-  &:focus, &:active {
-    outline: none;
+}
+.btn-ghost-pop {
+  border: 2px solid $color-pop;
+  color: $color-pop;
+  &:hover {
+    border: 2px solid $light;
+    background: $light;
+    color: $dark;
   }
 }

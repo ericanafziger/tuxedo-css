@@ -6,11 +6,17 @@
 .bg-light {
   background: $light;
 }
+.bg-pop {
+  background: $color-pop;
+}
 .bg-t-light {
   background: transparentize($light, 0.3);
 }
 .bg-t-dark {
   background: transparentize($dark, 0.3);
+}
+.bg-t-pop {
+  background: transparentize($color-pop, 0.3);
 }
 
 
@@ -22,4 +28,7 @@
 }
 .text-light {
   color: $light;
+}
+.text-pop {
+  color: $color-pop;
 }
