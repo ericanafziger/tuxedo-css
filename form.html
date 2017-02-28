@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuxedo CSS - Form Example</title>
+    <link rel="stylesheet" href="css/styles.css">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <form class="bg-t-dark">
+      <header class="form-header-light">Login</header>
+
+      <label class="text-light">Text input example</label>
+      <input type="email" class="input-light" placeholder="Email Address">
+      <input type="password" class="input-light" placeholder="Password">
+
+      <label class="text-light">Textarea</label>
+      <textarea class="textarea-light" rows="3" placeholder="Textarea text here"></textarea>
+
+      <label class="text-light">Select menu</label>
+      <select class="select-light">
+        <option selected="true" disabled>Choose Option</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
+
+      <label class="text-light">Vertical checkboxes</label>
+      <div class="checkbox-light">
+        <input type="checkbox" id="red">
+        <label for="red">Red</label>
+      </div>
+      <div class="checkbox-light">
+        <input type="checkbox" id="yellow">
+        <label for="yellow">Yellow</label>
+      </div>
+      <div class="checkbox-light">
+        <input type="checkbox" id="green">
+        <label for="green">Green</label>
+      </div>
+
+      <div class="form-divide-light"></div>
+
+      <label class="text-light">Horizontal checkboxes</label>
+      <div class="checkbox-light">
+        <input type="checkbox" id="orange">
+        <label for="orange">Orange</label>
+        <input type="checkbox" id="blue">
+        <label for="blue">Blue</label>
+        <input type="checkbox" id="pink">
+        <label for="pink">Pink</label>
+      </div>
+
+      <div class="form-divide-light"></div>
+
+      <label class="text-light">Vertical radio buttons</label>
+      <div class="radio-light">
+        <input type="radio" id="teal" name="radio-group">
+        <label for="teal">Teal</label>
+      </div>
+      <div class="radio-light">
+        <input type="radio" id="maroon" name="radio-group">
+        <label for="maroon">Maroon</label>
+      </div>
+
+      <div class="form-divide-light"></div>
+
+      <label class="text-light">Horizontal radio buttons</label>
+      <div class="radio-light">
+        <input type="radio" id="lime" name="radio-group">
+        <label for="lime">Lime</label>
+        <input type="radio" id="black" name="radio-group">
+        <label for="black">Black</label>
+        <input type="radio" id="navy" name="radio-group">
+        <label for="navy">Navy</label>
+      </div>
+
+      <div class="f-row">
+        <div class="f-col-4 flex-center">
+          <button type="button" class="btn-ghost-light">Login</button>
+          <button type="button" class="btn-light">Login</button>
+          <button type="button" class="btn-pop">Login</button>
+        </div>
+        <div class="f-col-4 flex-center">
+          <button type="button" class="btn-ghost-light">Login</button>
+        </div>
+      </div>
+      <div class="f-row">
+        <button type="button" class="btn-dark f-col-1 flex-center">Login</button>
+      </div>
+    </form>
+
+
+
+    <script src="js/three.js"></script>
+    <script src="js/three-render.js"></script>
+  </body>
+</html>

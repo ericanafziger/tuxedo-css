@@ -22,16 +22,16 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); }
   .hero-title {
-    width: 80%;
+    width: 70%;
     padding: 20px;
     margin: auto;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-bottom: 2px solid #F4F4F4; }
   .hero-body {
     margin: 20px auto;
     position: relative;
-    padding: 20px 0;
+    padding: 10px 0;
     width: 70%; }
   .hero .hero-image {
     display: block;
@@ -219,13 +219,13 @@ form {
   height: 1px; }
 
 .form-divide-light {
-  border-bottom: 1px solid #F4F4F4; }
+  border-bottom: 2px solid #F4F4F4; }
 
 .form-divide-dark {
-  border-bottom: 1px solid #191919; }
+  border-bottom: 2px solid #191919; }
 
 .form-divide-pop {
-  border-bottom: 1px solid #CE4257; }
+  border-bottom: 2px solid #CE4257; }
 
 label {
   font-size: 1rem;
