@@ -214,19 +214,20 @@ form {
   color: #F4F4F4;
   border-bottom: 2px solid #F4F4F4; }
 
-input {
+input, textarea, select {
   display: block;
   margin: 40px 0;
-  height: 3rem;
   max-width: 100%;
   width: 100%;
   font-size: 1rem;
-  padding-left: 20px;
-  background: none;
   font-family: "Josefin Sans", sans-serif; }
-  input:focus {
-    outline: none;
-    font-style: normal; }
+  input:focus, textarea:focus, select:focus {
+    outline: none; }
+
+input {
+  height: 3rem;
+  padding-left: 20px;
+  background: none; }
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -259,20 +260,25 @@ input {
   background: #CE4257;
   color: #F4F4F4; }
 
-select {
-  display: block; }
-
 textarea {
-  font-family: "Josefin Sans", sans-serif;
-  display: block;
-  margin: 40px 0;
-  max-width: 100%;
+  border: none;
   max-height: 400px;
-  width: 100%;
-  font-size: 1rem;
   padding: 20px 0 0 20px; }
-  textarea:focus, textarea:active {
-    outline: none; }
+
+.textarea-light {
+  border: 3px solid #F4F4F4;
+  background: #F4F4F4;
+  color: #191919; }
+
+.textarea-dark {
+  border: 3px solid #191919;
+  background: #191919;
+  color: #F4F4F4; }
+
+.textarea-pop {
+  border: 3px solid #CE4257;
+  background: #CE4257;
+  color: #F4F4F4; }
 
 .bg-dark {
   background: #191919; }
