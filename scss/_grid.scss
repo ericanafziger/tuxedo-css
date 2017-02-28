@@ -12,10 +12,9 @@
 // base column styling
 [class*='col-'] {
   float: left;
-  border: 1px solid tomato;
   min-height: 1px;
-  width: 8.3333%;
-  padding: 40px;
+  padding: 20px;
+  // border: 1px solid tomato;
 }
 
 
@@ -66,7 +65,7 @@
 
 // =============== Rules for Flex Grid ===============  //
 
-//Implement flex row to keep columns the same height
+//Implement flex-row to create grid with flexbox
 .flex-row {
   width: 100%;
   display: flex;
@@ -109,4 +108,10 @@
 }
 .f-col-12 {
   flex: 100%;
+}
+
+[class*='f-col-'] {
+  @media screen and #{$mobile} {
+    flex: 100%;
+  }
 }

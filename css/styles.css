@@ -10,10 +10,8 @@
 
 [class*='col-'] {
   float: left;
-  border: 1px solid tomato;
   min-height: 1px;
-  width: 8.3333%;
-  padding: 40px; }
+  padding: 20px; }
 
 .row:before,
 .row:after {
@@ -98,4 +96,8 @@
 .f-col-12 {
   flex: 100%; }
 
-/*# sourceMappingURL=grid.css.map */
+@media screen and (max-width: 500px) {
+  [class*='f-col-'] {
+    flex: 100%; } }
+
+/*# sourceMappingURL=styles.css.map */
