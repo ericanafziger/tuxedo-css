@@ -55,13 +55,13 @@
 .col-12 {
   width: 100%; }
 
-.flex-row {
+.f-row {
   width: 100%;
   display: flex;
   flex-wrap: wrap; }
 
 .f-col-1 {
-  flex: 8.33%; }
+  flex: 8.33% 1; }
 
 .f-col-2 {
   flex: 16.66%; }
@@ -99,5 +99,9 @@
 @media screen and (max-width: 500px) {
   [class*='f-col-'] {
     flex: 100%; } }
+
+@media screen and (max-width: 500px) {
+  [class*='col-'] {
+    width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

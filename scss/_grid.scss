@@ -65,8 +65,8 @@
 
 // =============== Rules for Flex Grid ===============  //
 
-//Implement flex-row to create grid with flexbox
-.flex-row {
+//Implement f-row to create grid with flexbox
+.f-row {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -74,7 +74,7 @@
 
 //individual column percentages
 .f-col-1 {
-  flex: 8.33%;
+  flex: 8.33% 1;
 }
 .f-col-2 {
   flex: 16.66%;
@@ -113,5 +113,10 @@
 [class*='f-col-'] {
   @media screen and #{$mobile} {
     flex: 100%;
+  }
+}
+[class*='col-'] {
+  @media screen and #{$mobile} {
+    width: 100%;
   }
 }
