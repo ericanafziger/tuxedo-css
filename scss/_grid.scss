@@ -14,13 +14,18 @@
   clear: both;
 }
 
-// base column styling
-$column-gutter: 1%; // change column gutter here
+$column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
+
 [class^='col-'] {
   float: left;
   min-height: 1px;
-  margin:  0 $column-gutter $column-gutter 0;
+  margin-bottom: $column-gutter;
+  margin-left: $column-gutter;
 }
+.row > [class^='col-']:first-child{
+  margin-left: 0;
+}
+// base column styling
 .col-1 {
   width: 8.33% - ($column-gutter);
 }
@@ -55,7 +60,7 @@ $column-gutter: 1%; // change column gutter here
   width: 91.66% - ($column-gutter);
 }
 .col-12 {
-  width: 100% - ($column-gutter);
+  width: 100%;
 }
 
 // =============== Rules for Flex Grid ===============  //

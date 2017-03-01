@@ -63,7 +63,11 @@ a {
 [class^='col-'] {
   float: left;
   min-height: 1px;
-  margin: 0 1% 1% 0; }
+  margin-bottom: 1%;
+  margin-left: 1%; }
+
+.row > [class^='col-']:first-child {
+  margin-left: 0; }
 
 .col-1 {
   width: 7.33%; }
@@ -99,7 +103,7 @@ a {
   width: 90.66%; }
 
 .col-12 {
-  width: 99%; }
+  width: 100%; }
 
 .f-row {
   width: 100%;
