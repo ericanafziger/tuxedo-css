@@ -24,12 +24,6 @@ $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
   margin-left: $column-gutter/2;
   margin-right: $column-gutter/2;
 }
-.row > [class^='col-']:first-child{
-  // margin-left: 0;
-}
-.row > [class^='col-']:last-child{
-  // margin-right: 0;
-}
 // base column styling
 .col-1 {
   width: 8.33% - ($column-gutter);
@@ -66,6 +60,23 @@ $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
 }
 .col-12 {
   width: 100% - ($column-gutter);
+}
+
+[class*='col-'] {
+  @media screen and #{$tablet} {
+    width: 50% - $column-gutter;
+  }
+}
+.col-12 {
+  @media screen and #{$tablet} {
+    width: 100% - $column-gutter;
+  }
+}
+[class*='col-'] {
+  @media screen and #{$mobile} {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 // =============== Rules for Flex Grid ===============  //
@@ -134,11 +145,5 @@ $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
   flex-direction: column;
   @media screen and #{$tablet} {
     flex: 100%;
-  }
-}
-[class*='col-'] {
-  @media screen and #{$mobile} {
-    width: 100%;
-    margin-left: 0;
   }
 }

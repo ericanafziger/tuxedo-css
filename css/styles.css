@@ -104,6 +104,19 @@ a {
 .col-12 {
   width: 99%; }
 
+@media screen and (max-width: 760px) {
+  [class*='col-'] {
+    width: 49%; } }
+
+@media screen and (max-width: 760px) {
+  .col-12 {
+    width: 99%; } }
+
+@media screen and (max-width: 500px) {
+  [class*='col-'] {
+    width: 100%;
+    margin-left: 0; } }
+
 .f-row {
   width: 100%;
   display: flex;
@@ -166,11 +179,6 @@ a {
   @media screen and (max-width: 760px) {
     .f-col-3, .f-col-4 {
       flex: 100%; } }
-
-@media screen and (max-width: 500px) {
-  [class*='col-'] {
-    width: 100%;
-    margin-left: 0; } }
 
 .hero {
   position: relative;
