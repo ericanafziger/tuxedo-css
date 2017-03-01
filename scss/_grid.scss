@@ -1,18 +1,10 @@
-// These following two rules apply to both basic and flex grids
+// These following two rules apply to both basic grid and flex grid
 .container {
   max-width: 1080px;
   width: 100%;
   margin: auto;
   padding: 40px 0;
 }
-// base column styling
-[class*='col-'] {
-  float: left;
-  min-height: 1px;
-  max-width: 100%;
-  padding: 10px 20px;
-}
-
 
 // =========== Basic Grid Rules for 12-column grid ========= //
 .row:before,
@@ -22,53 +14,61 @@
   clear: both;
 }
 
+// base column styling
+$column-gutter: 1%; // change column gutter here
+[class^='col-'] {
+  float: left;
+  min-height: 1px;
+  margin:  0 $column-gutter $column-gutter 0;
+}
 .col-1 {
-  width: 8.33%;
+  width: 8.33% - ($column-gutter);
 }
 .col-2 {
-  width: 16.66%;
+  width: 16.66% - ($column-gutter);
 }
 .col-3 {
-  width: 25%;
+  width: 25% - ($column-gutter);
 }
 .col-4 {
-  width: 33.33%;
+  width: 33.33% - ($column-gutter);
 }
 .col-5 {
-  width: 41.67%;
+  width: 41.67% - ($column-gutter);
 }
 .col-6 {
-  width: 50%;
+  width: 50% - ($column-gutter);
 }
 .col-7 {
-  width: 58.33%;
+  width: 58.33% - ($column-gutter);
 }
 .col-8 {
-  width: 66.67%;
+  width: 66.67% - ($column-gutter);
 }
 .col-9 {
-  width: 75%;
+  width: 75% - ($column-gutter);
 }
 .col-10 {
-  width: 83.33%;
+  width: 83.33% - ($column-gutter);
 }
 .col-11 {
-  width: 91.66%;
+  width: 91.66% - ($column-gutter);
 }
 .col-12 {
-  width: 100%;
+  width: 100% - ($column-gutter);
 }
 
 // =============== Rules for Flex Grid ===============  //
-
-//Implement f-row to create grid with flexbox
-.f-row {
+.f-row {  //Implement f-row to create grid with flexbox
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-//individual column percentages
+[class*="f-col"] {
+  padding: 10px 20px;
+  margin: 5px; //gutter between each flexed column
+}
 .f-col-1 {
   flex: 1;
 }
@@ -82,7 +82,7 @@
   flex: 4;
 }
 
-// flex classes to add to flex columns
+// flex helper classes to add to flexed columns
 [class*='flex-center'], [class*='flex-end'] {
   display: flex;
 }
@@ -111,12 +111,18 @@
   align-items: flex-end;
 }
 
-[class*='f-col-'] {
+.f-col-1, .f-col-2 {
   flex-direction: column;
   @media screen and #{$tablet} {
     flex: 50%;
   }
   @media screen and #{$mobile} {
+    flex: 100%;
+  }
+}
+.f-col-3, .f-col-4 {
+  flex-direction: column;
+  @media screen and #{$tablet} {
     flex: 100%;
   }
 }

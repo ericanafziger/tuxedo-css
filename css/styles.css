@@ -54,58 +54,61 @@ a {
   margin: auto;
   padding: 40px 0; }
 
-[class*='col-'] {
-  float: left;
-  min-height: 1px;
-  max-width: 100%;
-  padding: 10px 20px; }
-
 .row:before,
 .row:after {
   content: "";
   display: table;
   clear: both; }
 
+[class^='col-'] {
+  float: left;
+  min-height: 1px;
+  margin: 0 1% 1% 0; }
+
 .col-1 {
-  width: 8.33%; }
+  width: 7.33%; }
 
 .col-2 {
-  width: 16.66%; }
+  width: 15.66%; }
 
 .col-3 {
-  width: 25%; }
+  width: 24%; }
 
 .col-4 {
-  width: 33.33%; }
+  width: 32.33%; }
 
 .col-5 {
-  width: 41.67%; }
+  width: 40.67%; }
 
 .col-6 {
-  width: 50%; }
+  width: 49%; }
 
 .col-7 {
-  width: 58.33%; }
+  width: 57.33%; }
 
 .col-8 {
-  width: 66.67%; }
+  width: 65.67%; }
 
 .col-9 {
-  width: 75%; }
+  width: 74%; }
 
 .col-10 {
-  width: 83.33%; }
+  width: 82.33%; }
 
 .col-11 {
-  width: 91.66%; }
+  width: 90.66%; }
 
 .col-12 {
-  width: 100%; }
+  width: 99%; }
 
 .f-row {
   width: 100%;
   display: flex;
   flex-wrap: wrap; }
+
+[class*="f-col"] {
+  padding: 10px 20px;
+  margin: 5px; }
 
 .f-col-1 {
   flex: 1; }
@@ -146,13 +149,19 @@ a {
   justify-content: flex-end;
   align-items: flex-end; }
 
-[class*='f-col-'] {
+.f-col-1, .f-col-2 {
   flex-direction: column; }
   @media screen and (max-width: 760px) {
-    [class*='f-col-'] {
+    .f-col-1, .f-col-2 {
       flex: 50%; } }
   @media screen and (max-width: 500px) {
-    [class*='f-col-'] {
+    .f-col-1, .f-col-2 {
+      flex: 100%; } }
+
+.f-col-3, .f-col-4 {
+  flex-direction: column; }
+  @media screen and (max-width: 760px) {
+    .f-col-3, .f-col-4 {
       flex: 100%; } }
 
 @media screen and (max-width: 500px) {
@@ -302,7 +311,6 @@ button {
 
 form {
   max-width: 600px;
-  max-height: 100%;
   margin: auto;
   padding: 40px; }
 
@@ -341,7 +349,6 @@ label {
 input, textarea, select {
   display: block;
   margin: 5px 0 30px 0;
-  max-width: 100%;
   width: 100%;
   font-size: 1rem;
   font-family: "Josefin Sans", sans-serif; }
@@ -415,6 +422,7 @@ select {
 
 textarea {
   border: none;
+  max-width: 100%;
   max-height: 300px;
   padding: 20px 0 0 20px; }
 
@@ -441,7 +449,6 @@ textarea {
   margin: 20px 0;
   color: #191919; }
 
-/* Base for label styling */
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
   position: absolute;
@@ -450,14 +457,11 @@ textarea {
 [type="checkbox"]:not(:checked) + label,
 [type="checkbox"]:checked + label {
   position: relative;
-  font-family: "Josefin Sans", sans-serif;
   padding-left: 2.5rem;
   margin-right: 20px;
-  margin-bottom: 20px;
   padding-top: 4px;
   cursor: pointer; }
 
-/* checkbox styling */
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before {
   content: '';
@@ -475,7 +479,6 @@ textarea {
 .checkbox-dark [type="checkbox"]:checked + label:before {
   border: 3px solid #191919; }
 
-/* checked mark styling */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
   content: '';
@@ -494,13 +497,11 @@ textarea {
 .checkbox-dark [type="checkbox"]:checked + label:after {
   background: #191919; }
 
-/* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
   width: 0;
   height: 0; }
 
-/* disabled checkbox */
 [type="checkbox"]:disabled:not(:checked) + label:before,
 [type="checkbox"]:disabled:checked + label:before {
   border-color: #9B9B9B;
@@ -520,7 +521,6 @@ textarea {
   margin: 20px 0;
   color: #191919; }
 
-/* Base for label styling */
 [type="radio"]:not(:checked),
 [type="radio"]:checked {
   position: absolute;
@@ -529,10 +529,8 @@ textarea {
 [type="radio"]:not(:checked) + label,
 [type="radio"]:checked + label {
   position: relative;
-  font-family: "Josefin Sans", sans-serif;
   padding-left: 2.5rem;
   margin-right: 20px;
-  margin-bottom: 20px;
   padding-top: 4px;
   cursor: pointer; }
 
@@ -545,7 +543,7 @@ textarea {
   top: 0;
   width: 1rem;
   height: 1rem;
-  border-radius: 100%; }
+  border-radius: 50%; }
 
 .radio-light [type="radio"]:not(:checked) + label:before,
 .radio-light [type="radio"]:checked + label:before {
@@ -555,7 +553,6 @@ textarea {
 .radio-dark [type="radio"]:checked + label:before {
   border: 3px solid #191919; }
 
-/* checked mark styling */
 [type="radio"]:not(:checked) + label:after,
 [type="radio"]:checked + label:after {
   content: '';
@@ -575,13 +572,11 @@ textarea {
 .radio-dark [type="radio"]:checked + label:after {
   background: #191919; }
 
-/* checked mark aspect changes */
 [type="radio"]:not(:checked) + label:after {
   opacity: 0;
   width: 0;
   height: 0; }
 
-/* disabled radio */
 [type="radio"]:disabled:not(:checked) + label:before,
 [type="radio"]:disabled:checked + label:before {
   border-color: #9B9B9B;
