@@ -1,0 +1,29 @@
+nav {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  max-width: 1400px;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: 2;
+  font-family: $header-font;
+  ul {
+    list-style: none;
+  }
+}
+.nav-light {
+  background: $light;
+  color: $dark;
+}
+.nav-dark {
+  background: $dark;
+  color: $light;
+}
+.nav-ghost-light {
+  border-bottom: 2px solid $light;
+  color: $light;
+}
+.nav-ghost-dark {
+  border-bottom: 2px solid $dark;
+  color: $dark;
+}
