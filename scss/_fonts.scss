@@ -1,12 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700,700i|Lato');
-//fonts
-$header-font: 'Josefin Sans', sans-serif;
-$body-font: 'Lato', sans-serif;
-
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font;
 }
+h1 {
+    font-size: 36px;
+    line-height: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+h5 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 20px;
+}
 p {
   font-family: $body-font;
-  font-size: 1rem;
+  font-size: 16px;
+  line-height: 20px;
 }

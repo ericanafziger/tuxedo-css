@@ -11,15 +11,39 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Josefin Sans", sans-serif; }
 
+h1 {
+  font-size: 36px;
+  line-height: 40px; }
+
+h2 {
+  font-size: 30px;
+  line-height: 40px; }
+
+h3 {
+  font-size: 24px;
+  line-height: 40px; }
+
+h4 {
+  font-size: 18px;
+  line-height: 20px; }
+
+h5 {
+  font-size: 14px;
+  line-height: 20px; }
+
+h6 {
+  font-size: 12px;
+  line-height: 20px; }
+
 p {
   font-family: "Lato", sans-serif;
-  font-size: 1rem; }
+  font-size: 16px;
+  line-height: 20px; }
 
 .hero {
   position: relative;
   font-family: "Josefin Sans", sans-serif;
   min-height: 100vh;
-  width: 100vw;
   height: auto; }
   .hero-content {
     max-width: 1080px;
@@ -28,17 +52,22 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .hero-title {
+  .hero [class*=hero-title] {
     width: 70%;
     padding: 20px;
     margin: auto;
     text-align: center;
     font-size: 1.5rem;
-    border-bottom: 2px solid #F4F4F4;
     transition: width ease-in 200ms; }
     @media screen and (max-width: 500px) {
-      .hero-title {
+      .hero [class*=hero-title] {
         width: 100%; } }
+  .hero-title-dark {
+    border-bottom: 2px solid #191919;
+    color: #191919; }
+  .hero-title-light {
+    border-bottom: 2px solid #F4F4F4;
+    color: #F4F4F4; }
   .hero-body {
     margin: 20px auto;
     position: relative;
@@ -47,7 +76,8 @@ p {
     transition: width ease-in 200ms; }
     @media screen and (max-width: 500px) {
       .hero-body {
-        width: 100%; } }
+        width: 100%;
+        padding: 10px; } }
   .hero-image {
     display: block;
     width: 100%;
@@ -548,10 +578,16 @@ textarea {
 .text-dark {
   color: #191919; }
 
+.text-grey {
+  color: #9B9B9B; }
+
 .text-light {
   color: #F4F4F4; }
 
 .text-pop {
   color: #2A7F62; }
+
+.text-center {
+  text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -26,9 +26,16 @@
 .text-dark {
   color: $dark;
 }
+.text-grey {
+  color: $md-grey;
+}
 .text-light {
   color: $light;
 }
 .text-pop {
   color: $color-pop;
+}
+
+.text-center {
+  text-align: center;
 }
