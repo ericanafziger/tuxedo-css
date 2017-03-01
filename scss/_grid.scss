@@ -4,6 +4,7 @@
   width: 100%;
   margin: auto;
   padding: 40px 0;
+  border: 1px solid teal;
 }
 
 // =========== Basic Grid Rules for 12-column grid ========= //
@@ -20,10 +21,14 @@ $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
   float: left;
   min-height: 1px;
   margin-bottom: $column-gutter;
-  margin-left: $column-gutter;
+  margin-left: $column-gutter/2;
+  margin-right: $column-gutter/2;
 }
 .row > [class^='col-']:first-child{
-  margin-left: 0;
+  // margin-left: 0;
+}
+.row > [class^='col-']:last-child{
+  // margin-right: 0;
 }
 // base column styling
 .col-1 {
@@ -60,7 +65,7 @@ $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
   width: 91.66% - ($column-gutter);
 }
 .col-12 {
-  width: 100%;
+  width: 100% - ($column-gutter);
 }
 
 // =============== Rules for Flex Grid ===============  //
@@ -134,5 +139,6 @@ $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
 [class*='col-'] {
   @media screen and #{$mobile} {
     width: 100%;
+    margin-left: 0;
   }
 }

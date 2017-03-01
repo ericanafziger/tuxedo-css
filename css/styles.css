@@ -52,7 +52,8 @@ a {
   max-width: 1080px;
   width: 100%;
   margin: auto;
-  padding: 40px 0; }
+  padding: 40px 0;
+  border: 1px solid teal; }
 
 .row:before,
 .row:after {
@@ -64,10 +65,8 @@ a {
   float: left;
   min-height: 1px;
   margin-bottom: 1%;
-  margin-left: 1%; }
-
-.row > [class^='col-']:first-child {
-  margin-left: 0; }
+  margin-left: 0.5%;
+  margin-right: 0.5%; }
 
 .col-1 {
   width: 7.33%; }
@@ -103,7 +102,7 @@ a {
   width: 90.66%; }
 
 .col-12 {
-  width: 100%; }
+  width: 99%; }
 
 .f-row {
   width: 100%;
@@ -170,7 +169,8 @@ a {
 
 @media screen and (max-width: 500px) {
   [class*='col-'] {
-    width: 100%; } }
+    width: 100%;
+    margin-left: 0; } }
 
 .hero {
   position: relative;
