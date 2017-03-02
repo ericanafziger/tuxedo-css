@@ -35,6 +35,10 @@ nav {
     padding-left: 30px;
     flex: 1;
     align-self: center;
+    img {
+      height: 18px;
+      object-fit: cover;
+    }
   }
 }
 .nav-light {
@@ -135,7 +139,7 @@ nav {
   }
 }
 .flyout-menu {
-  margin-top: 20px;
+  margin: 20px 0 40px 0;
   list-style: none;
   li {
     text-align: center;
