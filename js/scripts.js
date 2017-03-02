@@ -15,4 +15,11 @@ $(document).ready(function() {
       }
     });
   });
+
+  $('.hamburger').click(function() {
+    $('.flyout').fadeIn();
+  });
+  $('.close').click(function() {
+    $('.flyout').fadeOut();
+  });
 });
