@@ -17,9 +17,11 @@ $(document).ready(function() {
   });
 
   $('.hamburger').click(function() {
-    $('.flyout').fadeIn();
+    $('.flyout').show();
+    $('body').css({'overflow': 'hidden'});
   });
   $('.close').click(function() {
-    $('.flyout').fadeOut();
+    $('.flyout').hide();
+    $('body').css({'overflow': 'auto'});
   });
 });

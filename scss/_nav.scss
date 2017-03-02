@@ -110,8 +110,9 @@ nav {
 }
 .flyout {
   position: fixed;
-  display: none;
-  background-image: linear-gradient(-180deg, transparentize($dark, .2), #2A7F62 100%);
+  // display: none;
+  overflow: auto;
+  background-image: linear-gradient(-180deg, transparentize($dark, 0) 20%, transparentize($color-pop, 0.1) 100%);
   width: 100%;
   height: 100vh;
   .bar {
@@ -119,16 +120,57 @@ nav {
     height: 60px;
     width: 100%;
     background: $dark;
+    padding-left: 5px;
     .close {
       flex: 1;
       z-index: 5;
       background: url('data:image/svg+xml;utf8, <svg width="19px" height="19px" viewBox="-1 -1 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Nav/Menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M0.65145077,0.6658667 L16.2803323,16.2947482" stroke="#F4F4F4" stroke-width="3"></path>
       <path d="M0.65145077,0.6658667 L16.2803323,16.2947482" stroke="#F4F4F4" stroke-width="3" transform="translate(8.465892, 8.480307) scale(-1, 1) translate(-8.465892, -8.480307) "></path></g></svg>');
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: 70%;
       &:hover {
         cursor: pointer;
       }
     }
+  }
+}
+.flyout-menu {
+  margin-top: 20px;
+  list-style: none;
+  li {
+    text-align: center;
+    width: 180px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    line-height: 5rem;
+    margin: 0 auto;
+    border-bottom: 3px solid $light;
+    a {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      line-height: 5rem;
+      padding: 20px;
+    }
+  }
+  .fly-dropdown {
+    .dropdown-menu {
+      display: none;
+      padding-bottom: 20px;
+      list-style: none;
+      li {
+        padding-left: 25px;
+        border-bottom: none;
+        text-align: left;
+        font-size: 1rem;
+        line-height: 2rem;
+        a {
+          font-size: 1rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+  .fly-dropdown:hover > .dropdown-menu {
+    display: block;
   }
 }
