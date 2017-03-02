@@ -4,7 +4,6 @@
   width: 100%;
   margin: auto;
   padding: 40px 0;
-  border: 1px solid teal;
 }
 
 // =========== Basic Grid Rules for 12-column grid ========= //
@@ -87,7 +86,7 @@ $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
 }
 
 [class*="f-col"] {
-  padding: 10px 20px;
+  padding: 20px;
   margin: 5px; //gutter between each flexed column
 }
 .f-col-1 {

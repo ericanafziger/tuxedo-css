@@ -6,26 +6,54 @@
     <title>Tuxedo CSS - Hero Form</title>
     <link rel="stylesheet" href="css/styles.css">
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js" charset="utf-8"></script>
   </head>
   <body>
-    <nav class="nav-ghost-light f-row">
-      <header class="text-light f-col-1"><h2>Logo</h2>
+    <nav class="nav-ghost-light">
+      <header class="text-light"><h2>Logo</h2>
       </header>
-      <ul class="f-row f-col-2">
+      <ul class="menu-items">
         <li class="f-col-1 flex-center"><a href="#">Home</a></li>
-        <li class="f-col-1 flex-center"><a href="#">Shop +</a></li>
-        <li class="f-col-1 flex-center"><a href="#">Work +</a></li>
+        <li class="f-col-1 flex-center dropdown"><a href="#">Shop +</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Women's Clothing</a></li>
+            <li><a href="#">Men's</a></li>
+            <li><a href="#">Kid's</a></li>
+            <li class="dropdown">Sale +
+              <ul class="sub-dropdown-menu">
+                <li>Women</li>
+                <li>Men</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="f-col-1 flex-center dropdown"><a href="#">Work +</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Portfolio</a></li>
+            <li class="dropdown"><a href="#">Photography</a></li>
+            <li><a href="#">Design</a></li>
+          </ul>
+        </li>
         <li class="f-col-1 flex-center"><a href="#">Cart</a></li>
       </ul>
+      <ul class="mobile-nav flex-center">
+        <div class="hamburger"></div>
+      </ul>
+      <div class="flyout">
+        <div class="bar">
+
+        </div>
+
+      </div>
 
     </nav>
 
     <div class="hero">
       <img class="hero-image" src="img/palms.jpg" alt="Image of the sea">
       <div class="hero-content">
-        <div class="hero-title">
-          <h1 class="text-light">Login</h1>
-        </div>
+        <header class="text-light">
+          <h1>Login</h1>
+        </header>
         <div class="hero-body">
           <form class="bg-t-dark">
             <label class="text-light">Email</label>
@@ -44,11 +72,11 @@
     <div class="hero">
       <img class="hero-image" src="img/sea.jpg" alt="Image of the sea">
       <div class="hero-content">
-        <div class="hero-title">
-          <h1 class="text-light">Login</h1>
-        </div>
+        <header class="text-light">
+          <h1>Login</h1>
+        </header>
         <div class="hero-body">
-          <form class="bg-t-dark">
+          <form class="bg-t-dark animate-in">
             <label class="text-light">Email</label>
             <input type="email" class="input-light" placeholder="Email Address">
             <label class="text-light">Password</label>

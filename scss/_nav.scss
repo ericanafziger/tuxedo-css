@@ -1,14 +1,40 @@
 nav {
-  height: 50px;
+  position: fixed; //change to position absolute for a not fixed nav
   width: 100%;
-  position: absolute;
+  height: 60px;
   max-width: 1400px;
   left: 50%;
+  display: flex;
   transform: translate(-50%,0);
   z-index: 2;
   font-family: $header-font;
-  ul {
+  @media screen and #{$tablet} {
+    padding-right: 30px;
+  }
+  .menu-items {
+    flex: 3;
+    max-width: 700px; //maximum width of container holding menu items
     list-style: none;
+    display: flex;
+    @media screen and #{$tablet} {
+      display: none;
+    }
+    li {        //change to li.dropdown to give background effect only to dropdowns
+      margin: 0;
+      &:hover {
+        background: $light;
+        color: $dark;
+        cursor: pointer;
+      }
+      a:hover {
+        color: inherit;
+      }
+    }
+  }
+  header {
+    padding-left: 30px;
+    flex: 1;
+    align-self: center;
   }
 }
 .nav-light {
@@ -26,4 +52,70 @@ nav {
 .nav-ghost-dark {
   border-bottom: 2px solid $dark;
   color: $dark;
+}
+.dropdown {
+  position: relative;
+  .dropdown-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 58px;
+    width: 100%;
+    background: $light;
+    li {
+      transition: background ease-in 100ms, color ease-in 100ms;
+      background: $light;
+      color: $dark;
+      padding: 15px 20px;
+      &:hover {
+        background: $dark;
+        color: $light;
+      }
+    }
+  }
+  .sub-dropdown-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    width: 160px; //change width of sub-dropdown-menu
+    height: 100%;
+    left: 100%; //switch to right to display on other side of menu
+  }
+}
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown:hover > .sub-dropdown-menu {
+  display: block;
+}
+
+//===========Mobile Menu=========//
+.mobile-nav {
+  display: none;
+  @media screen and #{$tablet} {
+    display: flex;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  .hamburger {
+    position: relative;
+    background: url('data:image/svg+xml;utf8,<svg width="27px" height="21px" viewBox="299 11 27 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" fill="none" transform="translate(301.000000, 13.000000)" stroke-linecap="round" stroke-width="1" fill-rule="evenodd"><g id="Nav/Menu" stroke="#F4F4F4"><path d="M0.409326823,1.5 L22.5119031,1.5" stroke-width="3"></path><path d="M0.409326823,8.5 L22.5119031,8.5" stroke-width="3"></path><path d="M0.409326823,15.5 L22.5119031,15.5" stroke-width="3"></path></g></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 21px;
+    width: 27px;
+  }
+}
+.flyout {
+  position: fixed;
+  background-image: linear-gradient(-180deg, transparentize($dark, .2), #2A7F62 100%);
+  width: 100vh;
+  height: 100vh;
+  .bar {
+    height: 60px;
+    width: 100%;
+    background: $dark;
+  }
 }

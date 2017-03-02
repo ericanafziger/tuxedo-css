@@ -52,8 +52,7 @@ a {
   max-width: 1080px;
   width: 100%;
   margin: auto;
-  padding: 40px 0;
-  border: 1px solid teal; }
+  padding: 40px 0; }
 
 .row:before,
 .row:after {
@@ -123,7 +122,7 @@ a {
   flex-wrap: wrap; }
 
 [class*="f-col"] {
-  padding: 10px 20px;
+  padding: 20px;
   margin: 5px; }
 
 .f-col-1 {
@@ -192,7 +191,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .hero [class*=hero-title] {
+  .hero header {
     width: 70%;
     padding: 20px;
     margin: auto;
@@ -200,14 +199,8 @@ a {
     font-size: 1.5rem;
     transition: width ease-in 200ms; }
     @media screen and (max-width: 500px) {
-      .hero [class*=hero-title] {
+      .hero header {
         width: 100%; } }
-  .hero-title-dark {
-    border-bottom: 2px solid #191919;
-    color: #191919; }
-  .hero-title-light {
-    border-bottom: 2px solid #F4F4F4;
-    color: #F4F4F4; }
   .hero-body {
     margin: 20px auto;
     position: relative;
@@ -225,16 +218,38 @@ a {
     object-fit: cover; }
 
 nav {
-  height: 50px;
+  position: fixed;
   width: 100%;
-  position: absolute;
+  height: 60px;
   max-width: 1400px;
   left: 50%;
+  display: flex;
   transform: translate(-50%, 0);
   z-index: 2;
   font-family: "Josefin Sans", sans-serif; }
-  nav ul {
-    list-style: none; }
+  @media screen and (max-width: 760px) {
+    nav {
+      padding-right: 30px; } }
+  nav .menu-items {
+    flex: 3;
+    max-width: 700px;
+    list-style: none;
+    display: flex; }
+    @media screen and (max-width: 760px) {
+      nav .menu-items {
+        display: none; } }
+    nav .menu-items li {
+      margin: 0; }
+      nav .menu-items li:hover {
+        background: #F4F4F4;
+        color: #191919;
+        cursor: pointer; }
+      nav .menu-items li a:hover {
+        color: inherit; }
+  nav header {
+    padding-left: 30px;
+    flex: 1;
+    align-self: center; }
 
 .nav-light {
   background: #F4F4F4;
@@ -251,6 +266,63 @@ nav {
 .nav-ghost-dark {
   border-bottom: 2px solid #191919;
   color: #191919; }
+
+.dropdown {
+  position: relative; }
+  .dropdown .dropdown-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 58px;
+    width: 100%;
+    background: #F4F4F4; }
+    .dropdown .dropdown-menu li {
+      transition: background ease-in 100ms, color ease-in 100ms;
+      background: #F4F4F4;
+      color: #191919;
+      padding: 15px 20px; }
+      .dropdown .dropdown-menu li:hover {
+        background: #191919;
+        color: #F4F4F4; }
+  .dropdown .sub-dropdown-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    width: 160px;
+    height: 100%;
+    left: 100%; }
+
+.dropdown:hover > .dropdown-menu {
+  display: block; }
+
+.dropdown:hover > .sub-dropdown-menu {
+  display: block; }
+
+.mobile-nav {
+  display: none; }
+  @media screen and (max-width: 760px) {
+    .mobile-nav {
+      display: flex; } }
+  .mobile-nav:hover {
+    cursor: pointer; }
+  .mobile-nav .hamburger {
+    position: relative;
+    background: url('data:image/svg+xml;utf8,<svg width="27px" height="21px" viewBox="299 11 27 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" fill="none" transform="translate(301.000000, 13.000000)" stroke-linecap="round" stroke-width="1" fill-rule="evenodd"><g id="Nav/Menu" stroke="#F4F4F4"><path d="M0.409326823,1.5 L22.5119031,1.5" stroke-width="3"></path><path d="M0.409326823,8.5 L22.5119031,8.5" stroke-width="3"></path><path d="M0.409326823,15.5 L22.5119031,15.5" stroke-width="3"></path></g></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 21px;
+    width: 27px; }
+
+.flyout {
+  position: fixed;
+  background-image: linear-gradient(-180deg, rgba(25, 25, 25, 0.8), #2A7F62 100%);
+  width: 100vh;
+  height: 100vh; }
+  .flyout .bar {
+    height: 60px;
+    width: 100%;
+    background: #191919; }
 
 canvas {
   display: block; }
@@ -632,5 +704,17 @@ textarea {
 
 .text-center {
   text-align: center; }
+
+.underline-dark {
+  border-bottom: 2px solid #191919; }
+
+.underline-light {
+  border-bottom: 2px solid #F4F4F4; }
+
+.underline-pop {
+  border-bottom: 2px solid #2A7F62; }
+
+.animate-in {
+  opacity: 0; }
 
 /*# sourceMappingURL=styles.css.map */

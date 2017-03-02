@@ -11,7 +11,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  [class*=hero-title] {
+  header {
     width: 70%;
     padding: 20px;
     margin: auto;
@@ -21,14 +21,6 @@
     @media screen and #{$mobile} {
       width: 100%;
     }
-  }
-  &-title-dark {
-    border-bottom: 2px solid $dark;
-    color: $dark;
-  }
-  &-title-light {
-    border-bottom: 2px solid $light;
-    color: $light;
   }
   &-body {
     margin: 20px auto;

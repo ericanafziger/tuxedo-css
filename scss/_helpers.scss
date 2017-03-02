@@ -39,3 +39,13 @@
 .text-center {
   text-align: center;
 }
+
+.underline-dark {
+  border-bottom: 2px solid $dark;
+}
+.underline-light {
+  border-bottom: 2px solid $light;
+}
+.underline-pop {
+  border-bottom: 2px solid $color-pop;
+}
