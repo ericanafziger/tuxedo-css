@@ -1,5 +1,5 @@
 nav {
-  position: fixed; //change to position absolute for a not fixed nav
+  position: relative; //change to position: absolute for non-fixed nav & position: fixed for a fixed nav
   width: 100%;
   height: 60px;
   max-width: 1400px;
@@ -10,6 +10,12 @@ nav {
   font-family: $header-font;
   @media screen and #{$tablet} {
     padding-right: 30px;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .absolute {
+    position: absolute;
   }
   .menu-items {
     flex: 3;
@@ -49,6 +55,10 @@ nav {
   background: $dark;
   color: $light;
 }
+.nav-pop {
+  background: $color-pop;
+  color: $light;
+}
 .nav-ghost-light {
   border-bottom: 2px solid $light;
   color: $light;
@@ -56,6 +66,10 @@ nav {
 .nav-ghost-dark {
   border-bottom: 2px solid $dark;
   color: $dark;
+}
+.nav-ghost-pop {
+  border-bottom: 2px solid $color-pop;
+  color: $color-pop;
 }
 .dropdown {
   position: relative;
