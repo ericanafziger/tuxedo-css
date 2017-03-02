@@ -211,7 +211,7 @@ a {
     object-fit: cover; }
 
 nav {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 60px;
   max-width: 1400px;
@@ -223,10 +223,6 @@ nav {
   @media screen and (max-width: 760px) {
     nav {
       padding-right: 30px; } }
-  nav .fixed {
-    position: fixed; }
-  nav .absolute {
-    position: absolute; }
   nav .menu-items {
     flex: 3;
     max-width: 700px;
@@ -772,6 +768,15 @@ textarea {
 
 .underline-pop {
   border-bottom: 2px solid #2A7F62; }
+
+.fixed {
+  position: fixed; }
+
+.absolute {
+  position: absolute; }
+
+.relative {
+  position: relative; }
 
 .animate-in {
   opacity: 0; }
