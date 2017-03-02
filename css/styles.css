@@ -309,6 +309,7 @@ nav {
 
 .flyout {
   position: fixed;
+  display: none;
   overflow: auto;
   background-image: linear-gradient(-180deg, #191919 20%, rgba(42, 127, 98, 0.9) 100%);
   width: 100%;
@@ -344,21 +345,25 @@ nav {
       font-size: 1.6rem;
       line-height: 5rem;
       padding: 20px; }
-  .flyout-menu .fly-dropdown .dropdown-menu {
+  .flyout-menu .fly-dropdown .dropdown-menu, .flyout-menu .sub-fly-dropdown .dropdown-menu {
     display: none;
     padding-bottom: 20px;
     list-style: none; }
-    .flyout-menu .fly-dropdown .dropdown-menu li {
+    .flyout-menu .fly-dropdown .dropdown-menu li, .flyout-menu .sub-fly-dropdown .dropdown-menu li {
       padding-left: 25px;
       border-bottom: none;
       text-align: left;
       font-size: 1rem;
       line-height: 2rem; }
-      .flyout-menu .fly-dropdown .dropdown-menu li a {
+      .flyout-menu .fly-dropdown .dropdown-menu li a, .flyout-menu .sub-fly-dropdown .dropdown-menu li a {
         font-size: 1rem;
         line-height: 2rem; }
-  .flyout-menu .fly-dropdown:hover > .dropdown-menu {
-    display: block; }
+    .flyout-menu .fly-dropdown .dropdown-menu .sub-dropdown-menu, .flyout-menu .sub-fly-dropdown .dropdown-menu .sub-dropdown-menu {
+      display: none;
+      border-top: 1px solid #F4F4F4;
+      padding-top: 10px;
+      list-style: none;
+      margin-left: 20px; }
 
 canvas {
   display: block; }

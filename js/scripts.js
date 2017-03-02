@@ -24,4 +24,11 @@ $(document).ready(function() {
     $('.flyout').hide();
     $('body').css({'overflow': 'auto'});
   });
+
+  $('.fly-dropdown').click(function() {
+    $(this).children('.dropdown-menu').fadeToggle();
+  });
+  $('.sub-fly-dropdown').hover(function() {
+    $(this).children('.sub-dropdown-menu').fadeToggle();
+  });
 });
