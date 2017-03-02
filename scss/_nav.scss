@@ -1,5 +1,5 @@
 nav {
-  position: relative; //change to position: absolute for non-fixed nav & position: fixed for a fixed nav
+  position: fixed; //change to position: absolute for non-fixed nav & position: fixed for a fixed nav
   width: 100%;
   height: 60px;
   max-width: 1400px;
@@ -49,13 +49,16 @@ nav {
 }
 .nav-light {
   background: $light;
+  max-width: 100%;
   color: $dark;
 }
 .nav-dark {
+  max-width: 100%;
   background: $dark;
   color: $light;
 }
 .nav-pop {
+  max-width: 100%;
   background: $color-pop;
   color: $light;
 }

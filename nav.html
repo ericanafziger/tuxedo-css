@@ -9,7 +9,7 @@
     <script src="js/tuxedo.js" charset="utf-8"></script>
   </head>
   <body>
-    <nav class="nav-dark">
+    <!-- <nav class="nav-dark absolute">
       <header class="text-light"><img src="img/logo-thick-light.svg" alt="Tuxedo Logo">
       </header>
       <ul class="menu-items">
@@ -17,9 +17,9 @@
         <li class="f-col-1 flex-center"><a href="#">Documentation</a></li>
         <li class="f-col-1 flex-center"><a href="#">About</a></li>
       </ul>
-    </nav>
+    </nav> -->
 
-    <nav class="nav-pop">
+    <!-- <nav class="nav-pop">
       <header class="text-light"><img src="img/logo-thick-light.svg" alt="Tuxedo Logo">
       </header>
       <ul class="menu-items">
@@ -58,17 +58,13 @@
           <div class="close f-col-1"></div>
         </div>
         <ul class="flyout-menu">
-          <li>Home</li>
+          <li><a href="#">Home</a></li>
           <li class="fly-dropdown"><a href="#">Shop +</a>
             <ul class="dropdown-menu">
               <li><a href="#">Women's</a></li>
               <li><a href="#">Men's</a></li>
               <li><a href="#">Kid's</a></li>
               <li class="sub-fly-dropdown"><a href="#">Sale</a>
-                <!-- <ul class="sub-dropdown-menu">
-                  <li><a href="#">Women</a></li>
-                  <li><a href="#">Men</a></li>
-                </ul> -->
               </li>
             </ul>
           </li>
@@ -83,7 +79,14 @@
         </ul>
       </div>
 
-    </nav>
+    </nav> -->
+
+    <nav class="nav-ghost-pop"> 	<header class="text-light"> 		<img src="img/logo-thick-light.svg" alt="Tuxedo Logo"> 	</header>
+    	<ul class="menu-items"> 		<li class="f-col-1 flex-center"><a href="#">Home</		a></li> 		<li class="f-col-1 flex-center"><a href="#">Shop</		a></li> 		<li class="f-col-1 flex-center"><a href="#">Work</a></li> 	</ul>
+      </nav>
+
+
+
 
     <div class="hero">
       <img class="hero-image" src="img/palms.jpg" alt="Image of the sea">
@@ -133,3 +136,8 @@
     <script src="js/three-render.js"></script>
   </body>
 </html>
+
+<!-- <ul class="sub-dropdown-menu">
+  <li><a href="#">Women</a></li>
+  <li><a href="#">Men</a></li>
+</ul> -->
