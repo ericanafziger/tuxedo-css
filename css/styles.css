@@ -123,6 +123,7 @@ a {
 
 [class*="f-col"] {
   padding: 20px;
+  flex-direction: column;
   margin: 5px; }
 
 .f-col-1 {
@@ -164,20 +165,12 @@ a {
   justify-content: flex-end;
   align-items: flex-end; }
 
-.f-col-1, .f-col-2 {
-  flex-direction: column; }
-  @media screen and (max-width: 760px) {
-    .f-col-1, .f-col-2 {
-      flex: 50%; } }
-  @media screen and (max-width: 500px) {
-    .f-col-1, .f-col-2 {
-      flex: 100%; } }
-
-.f-col-3, .f-col-4 {
-  flex-direction: column; }
-  @media screen and (max-width: 760px) {
-    .f-col-3, .f-col-4 {
-      flex: 100%; } }
+@media screen and (max-width: 500px) {
+  .responsive .f-col-1, .responsive .f-col-2 {
+    flex: 100%; } }
+@media screen and (max-width: 760px) {
+  .responsive .f-col-3, .responsive .f-col-4 {
+    flex: 100%; } }
 
 .hero {
   position: relative;
@@ -317,12 +310,21 @@ nav {
 .flyout {
   position: fixed;
   background-image: linear-gradient(-180deg, rgba(25, 25, 25, 0.8), #2A7F62 100%);
-  width: 100vh;
+  width: 100%;
   height: 100vh; }
   .flyout .bar {
+    display: flex;
     height: 60px;
     width: 100%;
     background: #191919; }
+    .flyout .bar .close {
+      flex: 1;
+      z-index: 5;
+      background: url('data:image/svg+xml;utf8, <svg width="19px" height="19px" viewBox="-1 -1 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Nav/Menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M0.65145077,0.6658667 L16.2803323,16.2947482" stroke="#F4F4F4" stroke-width="3"></path>\a       <path d="M0.65145077,0.6658667 L16.2803323,16.2947482" stroke="#F4F4F4" stroke-width="3" transform="translate(8.465892, 8.480307) scale(-1, 1) translate(-8.465892, -8.480307) "></path></g></svg>');
+      background-repeat: no-repeat;
+      background-position: center; }
+      .flyout .bar .close:hover {
+        cursor: pointer; }
 
 canvas {
   display: block; }

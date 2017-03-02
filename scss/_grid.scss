@@ -87,6 +87,7 @@ $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
 
 [class*="f-col"] {
   padding: 20px;
+  flex-direction: column;
   margin: 5px; //gutter between each flexed column
 }
 .f-col-1 {
@@ -131,18 +132,15 @@ $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
   align-items: flex-end;
 }
 
-.f-col-1, .f-col-2 {
-  flex-direction: column;
-  @media screen and #{$tablet} {
-    flex: 50%;
+.responsive {
+  .f-col-1, .f-col-2 {
+    @media screen and #{$mobile} {
+      flex: 100%;
+    }
   }
-  @media screen and #{$mobile} {
-    flex: 100%;
-  }
-}
-.f-col-3, .f-col-4 {
-  flex-direction: column;
-  @media screen and #{$tablet} {
-    flex: 100%;
+  .f-col-3, .f-col-4 {
+    @media screen and #{$tablet} {
+      flex: 100%;
+    }
   }
 }

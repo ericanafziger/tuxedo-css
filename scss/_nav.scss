@@ -111,11 +111,23 @@ nav {
 .flyout {
   position: fixed;
   background-image: linear-gradient(-180deg, transparentize($dark, .2), #2A7F62 100%);
-  width: 100vh;
+  width: 100%;
   height: 100vh;
   .bar {
+    display: flex;
     height: 60px;
     width: 100%;
     background: $dark;
+    .close {
+      flex: 1;
+      z-index: 5;
+      background: url('data:image/svg+xml;utf8, <svg width="19px" height="19px" viewBox="-1 -1 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Nav/Menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M0.65145077,0.6658667 L16.2803323,16.2947482" stroke="#F4F4F4" stroke-width="3"></path>
+      <path d="M0.65145077,0.6658667 L16.2803323,16.2947482" stroke="#F4F4F4" stroke-width="3" transform="translate(8.465892, 8.480307) scale(-1, 1) translate(-8.465892, -8.480307) "></path></g></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }

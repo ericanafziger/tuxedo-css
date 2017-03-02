@@ -14,10 +14,10 @@
       <p><code>.f-col-1</code>, <code>.f-col-2</code>, <code>.f-col-3</code>, and <code>.f-col-4</code>
       </p>
       <br>
-      <p>A <code>.f-col-2</code> will take up twice as much space as a <code>f-col-1</code> and a <code>f-col-3</code> will take up three times as much space as a <code>f-col-1</code>. See it in action below. Resize your browser to see how responsive each column is.</p>
+      <p>A <code>.f-col-2</code> will take up twice as much space as a <code>f-col-1</code> and a <code>f-col-3</code> will take up three times as much space as a <code>f-col-1</code>. See it in action below. Add the class <code>.responsive</code> to your rows to use predefined media queries. Resize your browser to see how responsive each column is.</p>
       <br>
 
-      <div class="f-row text-light">
+      <div class="f-row responsive text-light">
         <div class="f-col-1 flex-center bg-dark">
           <h2>Flex 1</h2>
         </div>
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <div class="f-row text-light">
+      <div class="f-row responsive text-light">
         <div class="f-col-1 flex-center bg-t-dark">
           <h2>Flex 1</h2>
         </div>
@@ -47,7 +47,7 @@
         </div>
       </div>
 
-      <div class="f-row text-light">
+      <div class="f-row responsive text-light">
         <div class="f-col-3 flex-center bg-light">
           <h2 class="text-dark">Flex 3</h2>
         </div>
@@ -59,7 +59,7 @@
       <br>
       <br>
 
-      <div class="f-row">
+      <div class="f-row responsive">
         <div style="height: 400px" class="f-col-1 bg-t-dark">
           <p class="text-light">Content is placed at <code>flex-start</code> by default if no flex direction is specified</p>
           <br>
@@ -84,15 +84,15 @@
         </div>
       </div>
 
-      <div class="f-row">
-        <div style="height: 100px" class="f-col-1 bg-dark flex-center">
+      <div class="f-row responsive">
+        <div style="min-height: 100px" class="f-col-1 bg-dark flex-center">
           <p class="text-light">
             If there is only one item in a row it will stretch to take up the entire width!
           </p>
         </div>
       </div>
 
-      <div class="f-row">
+      <div class="f-row responsive">
         <div class="f-col-1 bg-light flex-end">
           <p style="width: 70%"class="text-dark">
             This content is positioned on the end of the horizontal axis and the beginning of the vercal axis with <code>.flex-end</code>
@@ -100,7 +100,7 @@
           <br>
           <button class="btn-dark">Flex End</button>
         </div>
-        <div style="height: 200px"class="f-col-1 bg-t-pop flex-end-v">
+        <div style="min-height: 200px"class="f-col-1 bg-t-pop flex-end-v">
           <p style="width: 70%"class="text-light">
             Use <code>.flex-end-v</code> to position items on the end of the vercal axis but the start of the horizontal axis.
           </p>
