@@ -6,8 +6,79 @@
     <title>Tuxedo CSS - Hero Form</title>
     <link rel="stylesheet" href="css/styles.css">
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/tuxedo.js" charset="utf-8"></script>
   </head>
   <body>
+    <nav class="nav-ghost-light"> 
+      <header> 
+        <img src="img/logo-thick-light.svg" alt="Tuxedo Logo"> 
+      </header>
+    	<ul class="menu-items"> 
+        <li class="f-col-1 flex-center"><a href="#">Get Started</a></li> 
+        <li class="f-col-1 flex-center dropdown"><a href="#">Docs +</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Animations</a></li>
+            <li><a href="#">Buttons</a></li>
+            <li><a href="#">Colors</a></li>
+            <li><a href="#">Fonts</a></li>
+            <li><a href="#">Forms</a></li>
+            <li><a href="#">Grid</a></li>
+            <li><a href="#">Hero</a></li>
+            <li><a href="#">Nav</a></li>
+          </ul>
+        </li> 
+        <li class="f-col-1 flex-center"><a href="#">About</a></li> 
+      </ul>
+    	<ul class="mobile-nav flex-center"> 
+        <div class="hamburger"></div> 
+      </ul>
+      <div class="flyout">
+    	  <div class="bar"> 
+          <header class="text-light f-col-4"> 
+            <img src="img/logo-thick-light.svg" alt="Tuxedo Logo"> 
+          </header> 
+          <div class="close f-col-1"></div> 
+        </div>
+        <ul class="flyout-menu"> 
+          <li><a href="#">Start</a></li> 
+          <li class="fly-dropdown"><a href="#">Docs +</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Animations</a></li>
+              <li><a href="#">Buttons</a></li>
+              <li><a href="#">Colors</a></li>
+              <li><a href="#">Fonts</a></li>
+              <li><a href="#">Forms</a></li>
+              <li><a href="#">Grid</a></li>
+              <li><a href="#">Hero</a></li>
+              <li><a href="#">Nav</a></li>
+            </ul>
+          </li> 
+          <li><a href="#">About</a></li> 
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <img class="hero-image" src="img/palms-dark.png" alt="Image of the sea">
+      <div class="hero-content">
+        <header>
+          <h1 class="text-light">Welcome to</h1>
+        </header>
+        <header>
+          <img src="img/thin-logo-large.svg" alt="">
+        </header>
+        <div class="hero-body">
+          <p class="text-light text-center">a different kind of css framework</p>
+          <br>
+          <div class="f-row">
+            <form method="get" action="tuxedo.scss.zip">
+              <button class="btn-pop" type="submit">Get Started</button>
+            </form>
+          </div>
+          <!-- <p class="text-light text-center"><a href="tuxedo.scss.zip" download="">Download Full Version</a></p> -->
+        </div>
+      </div>
+    </div>
 
     <div class="hero">
       <img class="hero-image" src="img/sea.jpg" alt="Image of the sea">
@@ -31,27 +102,6 @@
       </div>
     </div>
 
-    <div class="hero">
-      <img class="hero-image" src="img/palms-dark.png" alt="Image of the sea">
-      <div class="hero-content">
-        <header>
-          <h1 class="text-light">Welcome to</h1>
-        </header>
-        <header>
-          <img src="img/thin-logo-large.svg" alt="">
-        </header>
-        <div class="hero-body">
-          <p class="text-light text-center">a different kind of css framework</p>
-          <br>
-          <div class="f-row">
-            <form method="get" action="tuxedo.scss.zip">
-              <button class="btn-pop" type="submit">Get Started</button>
-            </form>
-          </div>
-          <!-- <p class="text-light text-center"><a href="tuxedo.scss.zip" download="">Download Full Version</a></p> -->
-        </div>
-      </div>
-    </div>
 
     <div class="hero">
       <img class="hero-image" src="img/sea.jpg" alt="Image of the sea">
