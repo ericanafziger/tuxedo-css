@@ -245,13 +245,13 @@ nav {
     @media screen and (max-width: 760px) {
       nav .menu-items {
         display: none; } }
-    nav .menu-items li {
+    nav .menu-items a, nav .menu-items li {
       margin: 0; }
-      nav .menu-items li:hover {
+      nav .menu-items a:hover, nav .menu-items li:hover {
         background: #F4F4F4;
         color: #191919;
         cursor: pointer; }
-      nav .menu-items li a:hover {
+      nav .menu-items a a:hover, nav .menu-items li a:hover {
         color: inherit; }
   nav header {
     padding-left: 30px;
@@ -361,7 +361,6 @@ nav {
   margin: 20px 0 40px 0;
   list-style: none; }
   .flyout-menu li {
-    text-align: center;
     width: 180px;
     font-size: 1.6rem;
     text-transform: uppercase;
@@ -371,14 +370,12 @@ nav {
     .flyout-menu li a {
       text-transform: uppercase;
       font-size: 1.6rem;
-      line-height: 5rem;
-      padding: 20px; }
+      line-height: 5rem; }
   .flyout-menu .fly-dropdown .dropdown-menu, .flyout-menu .sub-fly-dropdown .dropdown-menu {
     display: none;
     padding-bottom: 20px;
     list-style: none; }
     .flyout-menu .fly-dropdown .dropdown-menu li, .flyout-menu .sub-fly-dropdown .dropdown-menu li {
-      padding-left: 25px;
       border-bottom: none;
       text-align: left;
       font-size: 1rem;
