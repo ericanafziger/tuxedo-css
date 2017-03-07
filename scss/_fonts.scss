@@ -1,9 +1,11 @@
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, blockquote {
   font-family: $header-font;
 }
 h1 {
     font-size: 36px;
     line-height: 40px;
+    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 h2 {
@@ -18,22 +20,34 @@ h3 {
 
 h4 {
     font-size: 18px;
-    line-height: 20px;
+    line-height: 32px;
 }
 
 h5 {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 32px;
 }
 
 h6 {
-    font-size: 12px;
-    line-height: 20px;
+  @extend %body-font;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  color: $dark-grey;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 p {
   @extend %body-font;
   font-size: 16px;
   line-height: 20px;
+  margin-bottom: 20px;
+}
+small {
+  @extend %body-font;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 14px;
 }
 a {
   font-size: 16px;
@@ -42,5 +56,21 @@ a {
   text-decoration: none;
   &:hover {
     color: $md-grey;
+    // cursor: pointer;
+  }
+}
+blockquote {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: lighter;
+  max-width: 500px;
+  border-left: 2px solid $dark;
+  padding-left: 30px;
+  line-height: 34px;
+  margin-bottom: 20px;
+  cite {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
   }
 }
