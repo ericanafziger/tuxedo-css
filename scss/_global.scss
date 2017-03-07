@@ -1,20 +1,20 @@
 //change variables below to customize the tuxedo framework
 
 //colors
-$dark: #191919; //change global 'dark variable'
-$light: #F4F4F4; //change global 'light variable'
-$light-grey: #F4F4F4;
-$md-grey: #9B9B9B;
-$dark-grey: #5C5C5C;
+$dark: #262525; //change global 'dark variable'
+$dark-grey: #5c5c5c;
+$md-grey: #c8c8c8;
+$light-grey: #f4f4f4;
+$light: #f4f4f4; //change global 'light variable'
 $color-pop: #2A7F62; //change global 'color-pop'
 
-//fonts - top update import or point to new font below.
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700,700i|Lato:300,400,700');
+//fonts - to update, import a new font below
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100i,300,700,700i|Lato:300,400,700');
 
 //Define font family for header and body font. Must already be imported above
 $header-font: 'Josefin Sans', sans-serif;
 %body-font {
   font-family: 'Lato', sans-serif;
   font-weight: lighter;
-  letter-spacing: .8px;
+  letter-spacing: .5px;
 }
