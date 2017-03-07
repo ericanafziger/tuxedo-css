@@ -35,8 +35,82 @@ $(document).ready(function() {
     });
   }
 
-////////// Add Functions to Call HERE//////////
 
+  // ================Slideshow Functionality ================//
+function heroSlideshow() {
+    var totalImages = $(".images").children().length; // # of total slideshow images
+    var imageCounter = $(".images").children().length; // keeps track of current image
+    var interval = null;
+      function startSlideshow() { interval = setInterval(function() {
+      var photoNumber = parseInt($(".images .active").attr('class')); // active photo
+      $(".images img").removeClass("active");
+      if (photoNumber < totalImages) {
+        imageCounter = photoNumber + 1;
+        $(".images img:nth-child("+imageCounter+")").addClass("active");
+      } else if (photoNumber === totalImages) {
+        imageCounter = 1;
+        $(".images img:nth-child("+imageCounter+")").addClass("active");
+      } else {
+        imageCounter += 1;
+        $(".images img:nth-child("+imageCounter+")").addClass("active");
+      }
+      photoNumber += 1;
+      $(".circle").removeClass("active");
+      $(".circle:nth-child("+imageCounter+")").addClass("active");
+    }, 5000); }
+
+    function stopSlideshow() { clearInterval(interval)}
+
+    startSlideshow();
+    $('.left-arrow').click(function(){
+      stopSlideshow();
+      var photoNumber = parseInt($(".images .active").attr('class')); // active photo
+      $(".circle").removeClass("active");
+      $(".images img").removeClass("active");
+      if (photoNumber===1) {
+        imageCounter = $(".images").children().length;
+        $(".images img:nth-child("+imageCounter+")").addClass("active");
+      } else {
+        imageCounter -= 1;
+        $(".images img:nth-child("+imageCounter+")").addClass("active");
+      }
+      $(".circle:nth-child("+imageCounter+")").addClass("active");
+      startSlideshow();
+    });
+
+    $('.right-arrow').click(function(){
+      stopSlideshow();
+      var photoNumber = parseInt($(".images .active").attr('class')); // active photo
+      $(".circle").removeClass("active");
+      $(".images img").removeClass("active");
+      if (photoNumber < totalImages) {
+        imageCounter = photoNumber + 1;
+        $(".images img:nth-child("+imageCounter+")").addClass("active");
+      } else if (photoNumber === totalImages) {
+        imageCounter = 1;
+        $(".images img:nth-child("+imageCounter+")").addClass("active");
+      } else {
+        imageCounter += 1;
+        $(".images img:nth-child("+imageCounter+")").addClass("active");
+      }
+      $(".circle:nth-child("+imageCounter+")").addClass("active");
+      startSlideshow();
+    });
+    $(".circle").click(function(){
+      stopSlideshow();
+      var circleNumber = $(this).attr('class').replace(/[^\d]/g, ""); // clicked circle
+      $(".circle").removeClass("active");
+      $(this).addClass("active");
+      $(".images img").removeClass("active");
+      $(".images img:nth-child("+circleNumber+")").addClass("active");
+      imageCounter = circleNumber;
+      startSlideshow();
+    });
+  }
+
+
+////////// Add Functions to Call HERE//////////
+  heroSlideshow();
   mobileMenu();
   animations();
 });
