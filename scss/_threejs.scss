@@ -1,6 +1,11 @@
+// .canvas-container {
+//   position: relative;
+//   height: 100vh;
+// }
+[id*="three-"] {
+  // position: absolute;
+}
+
 canvas {
   display: block;
-}
-#three-canvas {
-  position: absolute;
 }
