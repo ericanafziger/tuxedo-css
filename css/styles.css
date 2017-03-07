@@ -227,7 +227,7 @@ nav {
   position: absolute;
   width: 100%;
   height: 60px;
-  max-width: 1400px;
+  max-width: 1200px;
   left: 50%;
   display: flex;
   transform: translate(-50%, 0);
@@ -294,6 +294,7 @@ nav {
     list-style: none;
     position: absolute;
     top: 58px;
+    left: 0;
     width: 100%;
     background: #f4f4f4; }
     .dropdown .dropdown-menu li {
@@ -327,18 +328,23 @@ nav {
   .mobile-nav:hover {
     cursor: pointer; }
   .mobile-nav .hamburger {
+    display: none;
     position: relative;
     background: url('data:image/svg+xml;utf8,<svg width="27px" height="21px" viewBox="299 11 27 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" fill="none" transform="translate(301.000000, 13.000000)" stroke-linecap="round" stroke-width="1" fill-rule="evenodd"><g id="Nav/Menu" stroke="#F4F4F4"><path d="M0.409326823,1.5 L22.5119031,1.5" stroke-width="3"></path><path d="M0.409326823,8.5 L22.5119031,8.5" stroke-width="3"></path><path d="M0.409326823,15.5 L22.5119031,15.5" stroke-width="3"></path></g></g></svg>');
     background-repeat: no-repeat;
     background-position: center;
     height: 21px;
     width: 27px; }
+    @media screen and (max-width: 760px) {
+      .mobile-nav .hamburger {
+        display: block; } }
 
 .flyout {
   position: fixed;
+  z-index: 5;
   display: none;
   overflow: auto;
-  background-image: linear-gradient(-180deg, #262525 20%, rgba(42, 127, 98, 0.9) 100%);
+  background-image: linear-gradient(-180deg, #262525 20%, rgba(38, 37, 37, 0.9) 100%);
   width: 100%;
   height: 100vh; }
   .flyout .bar {
@@ -360,24 +366,23 @@ nav {
   margin: 20px 0 40px 0;
   list-style: none; }
   .flyout-menu li {
-    width: 180px;
-    font-size: 1.6rem;
+    width: 280px;
+    font-size: 1.4rem;
     text-transform: uppercase;
-    line-height: 5rem;
+    padding: 20px 0;
     margin: 0 auto;
-    border-bottom: 3px solid #f4f4f4; }
+    border-bottom: 2px solid #f4f4f4; }
     .flyout-menu li a {
       text-transform: uppercase;
-      font-size: 1.6rem;
-      line-height: 5rem; }
+      font-size: 1.4rem; }
   .flyout-menu .fly-dropdown .dropdown-menu, .flyout-menu .sub-fly-dropdown .dropdown-menu {
     display: none;
-    padding-bottom: 20px;
     list-style: none; }
     .flyout-menu .fly-dropdown .dropdown-menu li, .flyout-menu .sub-fly-dropdown .dropdown-menu li {
       border-bottom: none;
       text-align: left;
       font-size: 1rem;
+      padding: 0;
       line-height: 2rem; }
       .flyout-menu .fly-dropdown .dropdown-menu li a, .flyout-menu .sub-fly-dropdown .dropdown-menu li a {
         font-size: 1rem;
@@ -388,6 +393,52 @@ nav {
       padding-top: 10px;
       list-style: none;
       margin-left: 20px; }
+
+.fly-dropdown .dropdown-menu {
+  margin-top: 10px; }
+
+.side-bar {
+  font-family: "Josefin Sans", sans-serif;
+  position: fixed;
+  overflow: auto;
+  height: 100vh;
+  padding: 60px;
+  max-width: 400px;
+  width: 40%; }
+  @media screen and (max-width: 760px) {
+    .side-bar {
+      display: none; } }
+  .side-bar img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    margin-bottom: 40px; }
+  .side-bar ul {
+    margin-top: 20px;
+    list-style: none;
+    color: #c8c8c8;
+    padding-bottom: 20px; }
+    .side-bar ul .active {
+      color: #f4f4f4;
+      text-decoration: underline; }
+    .side-bar ul a {
+      font-size: 1.3em;
+      line-height: 2.5em; }
+      .side-bar ul a:hover {
+        color: #f4f4f4; }
+
+.side-bar-content {
+  padding: 60px 5% 30px 450px;
+  margin: auto;
+  max-width: 1400px;
+  min-height: 100vh; }
+  @media screen and (max-width: 1015px) {
+    .side-bar-content {
+      padding-left: 45%; } }
+  @media screen and (max-width: 760px) {
+    .side-bar-content {
+      padding: 40px;
+      padding-top: 80px; } }
 
 canvas {
   display: block; }
