@@ -3,6 +3,12 @@
 .bg-dark {
   background: $dark;
 }
+.bg-dark-grey {
+  background: $dark-grey;
+}
+.bg-md-grey {
+  background: $md-grey;
+}
 .bg-light {
   background: $light;
 }
@@ -26,8 +32,11 @@
 .text-dark {
   color: $dark;
 }
-.text-grey {
+.text-md-grey {
   color: $md-grey;
+}
+.text-dark-grey {
+  color: $dark-grey;
 }
 .text-light {
   color: $light;
@@ -35,20 +44,11 @@
 .text-pop {
   color: $color-pop;
 }
-
 .text-center {
   text-align: center;
 }
 
-.underline-dark {
-  border-bottom: 2px solid $dark;
-}
-.underline-light {
-  border-bottom: 2px solid $light;
-}
-.underline-pop {
-  border-bottom: 2px solid $color-pop;
-}
+// Position helpers
 
 .fixed {
   position: fixed;
@@ -58,4 +58,115 @@
 }
 .relative {
   position: relative;
+}
+
+// Media Query helpers
+.tablet-hide {
+  @media screen and #{$tablet} {
+    display: none;
+  }
+}
+.tablet-show {
+  display: none;
+  @media screen and #{$tablet} {
+    display: block;
+  }
+}
+.tablet-flex {
+  display: none;
+  @media screen and #{$tablet} {
+    display: flex;
+  }
+}
+.mobile-hide {
+  @media screen and #{$mobile} {
+    display: none;
+  }
+}
+.mobile-show {
+  display: none;
+  @media screen and #{$mobile} {
+    display: block;
+  }
+}
+.mobile-flex {
+  display: none;
+  @media screen and #{$mobile} {
+    display: flex;
+  }
+}
+
+// Border helpers
+
+.box-pop {
+  border: 2px solid $color-pop;
+  padding: 40px;
+}
+.box-dark {
+  border: 2px solid $dark;
+  padding: 40px;
+}
+.box-light {
+  border: 2px solid $light;
+  padding: 40px;
+}
+
+.border-left-pop {
+  border-left: 2px solid $color-pop;
+  padding-left: 40px;
+}
+.border-left-dark {
+  border-left: 2px solid $dark;
+  padding-left: 40px;
+}
+.border-left-light {
+  border-left: 2px solid $light;
+  padding-left: 40px;
+}
+
+.underline-dark {
+  border-bottom: 2px solid $dark;
+  margin-bottom: 20px;
+}
+.underline-light {
+  border-bottom: 2px solid $light;
+  margin-bottom: 20px;
+}
+.underline-pop {
+  border-bottom: 2px solid $color-pop;
+  margin-bottom: 20px;
+}
+
+
+// flex helper classes to add to flexed elements
+[class*='flex-center'], [class*='flex-end'] {
+  display: flex;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-center-h {
+  align-items: center;
+  justify-content: flex-start;
+}
+.flex-center-v {
+  justify-content: center;
+  align-items: flex-start;
+}
+.flex-center-end {
+  justify-content: center;
+  align-items: flex-end;
+}
+.flex-end-v {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.flex-end-h {
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.flex-end {
+  justify-content: flex-end;
+  align-items: flex-end;
 }

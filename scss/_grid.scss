@@ -1,172 +1,117 @@
-// Background Helpers
-
-.bg-dark {
-  background: $dark;
-}
-.bg-dark-grey {
-  background: $dark-grey;
-}
-.bg-md-grey {
-  background: $md-grey;
-}
-.bg-light {
-  background: $light;
-}
-.bg-pop {
-  background: $color-pop;
-}
-.bg-t-light {
-  background: transparentize($light, 0.3);
-}
-.bg-t-dark {
-  background: transparentize($dark, 0.3);
-}
-.bg-t-pop {
-  background: transparentize($color-pop, 0.3);
+// These following two rules apply to both basic grid and flex grid
+.container {
+  max-width: 1200px; //change how wide container is allowed to go
+  width: 100%;
+  margin: auto;
+  padding: 40px 30px;
 }
 
-
-
-// Text Helpers
-
-.text-dark {
-  color: $dark;
-}
-.text-md-grey {
-  color: $md-grey;
-}
-.text-dark-grey {
-  color: $dark-grey;
-}
-.text-light {
-  color: $light;
-}
-.text-pop {
-  color: $color-pop;
-}
-.text-center {
-  text-align: center;
+// =========== Basic Grid Rules for 12-column grid ========= //
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-// Position helpers
+$column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
 
-.fixed {
-  position: fixed;
+[class^='col-'] {
+  float: left;
+  min-height: 1px;
+  margin-bottom: $column-gutter;
+  margin-left: $column-gutter/2;
+  margin-right: $column-gutter/2;
 }
-.absolute {
-  position: absolute;
+// base column styling
+.col-1 {
+  width: 8.33% - ($column-gutter);
 }
-.relative {
-  position: relative;
+.col-2 {
+  width: 16.66% - ($column-gutter);
+}
+.col-3 {
+  width: 25% - ($column-gutter);
+}
+.col-4 {
+  width: 33.33% - ($column-gutter);
+}
+.col-5 {
+  width: 41.67% - ($column-gutter);
+}
+.col-6 {
+  width: 50% - ($column-gutter);
+}
+.col-7 {
+  width: 58.33% - ($column-gutter);
+}
+.col-8 {
+  width: 66.67% - ($column-gutter);
+}
+.col-9 {
+  width: 75% - ($column-gutter);
+}
+.col-10 {
+  width: 83.33% - ($column-gutter);
+}
+.col-11 {
+  width: 91.66% - ($column-gutter);
+}
+.col-12 {
+  width: 100% - ($column-gutter);
 }
 
-// Media Query helpers
-.tablet-hide {
+[class*='col-'] {
   @media screen and #{$tablet} {
-    display: none;
+    width: 50% - $column-gutter;
   }
 }
-.tablet-show {
-  display: none;
+.col-12 {
   @media screen and #{$tablet} {
-    display: block;
+    width: 100% - $column-gutter;
   }
 }
-.tablet-flex {
-  display: none;
-  @media screen and #{$tablet} {
-    display: flex;
-  }
-}
-.mobile-hide {
+[class*='col-'] {
   @media screen and #{$mobile} {
-    display: none;
-  }
-}
-.mobile-show {
-  display: none;
-  @media screen and #{$mobile} {
-    display: block;
-  }
-}
-.mobile-flex {
-  display: none;
-  @media screen and #{$mobile} {
-    display: flex;
+    width: 100%;
+    margin-left: 0;
   }
 }
 
-// Border helpers
-
-.box-pop {
-  border: 2px solid $color-pop;
-  padding: 40px;
-}
-.box-dark {
-  border: 2px solid $dark;
-  padding: 40px;
-}
-.box-light {
-  border: 2px solid $light;
-  padding: 40px;
-}
-
-.border-left-pop {
-  border-left: 2px solid $color-pop;
-  padding-left: 40px;
-}
-.border-left-dark {
-  border-left: 2px solid $dark;
-  padding-left: 40px;
-}
-.border-left-light {
-  border-left: 2px solid $light;
-  padding-left: 40px;
-}
-
-.underline-dark {
-  border-bottom: 2px solid $dark;
-  margin-bottom: 20px;
-}
-.underline-light {
-  border-bottom: 2px solid $light;
-  margin-bottom: 20px;
-}
-.underline-pop {
-  border-bottom: 2px solid $color-pop;
-  margin-bottom: 20px;
-}
-
-
-// flex helper classes to add to flexed elements
-[class*='flex-center'], [class*='flex-end'] {
+// =============== Rules for Flex Grid ===============  //
+.f-row {  //Implement f-row to create grid with flexbox
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
-.flex-center {
-  justify-content: center;
-  align-items: center;
+
+[class*="f-col"] {
+  padding: 10px 20px;
+  flex-direction: column;
+  margin: 5px; //gutter between each flexed column
 }
-.flex-center-h {
-  align-items: center;
-  justify-content: flex-start;
+.f-col-1 {
+  flex: 1;
 }
-.flex-center-v {
-  justify-content: center;
-  align-items: flex-start;
+.f-col-2 {
+  flex: 2;
 }
-.flex-center-end {
-  justify-content: center;
-  align-items: flex-end;
+.f-col-3 {
+  flex: 3;
 }
-.flex-end-v {
-  justify-content: flex-end;
-  align-items: flex-start;
+.f-col-4 {
+  flex: 4;
 }
-.flex-end-h {
-  align-items: flex-end;
-  justify-content: flex-start;
-}
-.flex-end {
-  justify-content: flex-end;
-  align-items: flex-end;
+
+.responsive {
+  .f-col-1, .f-col-2 {
+    @media screen and #{$mobile} {
+      flex: 100%;
+    }
+  }
+  .f-col-3, .f-col-4 {
+    @media screen and #{$tablet} {
+      flex: 100%;
+    }
+  }
 }
