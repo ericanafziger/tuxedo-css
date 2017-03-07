@@ -518,8 +518,18 @@ nav {
       padding: 40px;
       padding-top: 80px; } }
 
+.canvas-container {
+  position: relative; }
+  .canvas-container .canvas-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px; }
+
 canvas {
-  display: block; }
+  display: block;
+  max-width: 100%; }
 
 button {
   font-family: "Josefin Sans", sans-serif;

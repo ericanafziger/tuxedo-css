@@ -1,33 +1,60 @@
+//color variables
+var dark = 0x262525;
+var darkGrey = 0x5c5c5c;
+var mdGrey = 0xc8c8c8;
+var light = 0xf4f4f4;
+var pop = 0x2A7F62;
+
+//THREE variables
 var camera,
     mySphereCanvas = document.getElementById('three-sphere'),
     myTorusCanvas = document.getElementById('three-torus');
-
-    window.onresize = function() {
-      sphereRenderer.setSize( window.innerWidth, window.innerHeight );
-      camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 1000 );
-    }
-
+    myCubeCanvas = document.getElementById('three-cube');
 
     // Camera
     camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-    // Material
-    var material = new THREE.MeshLambertMaterial({
-      color: 0xDEDEDE,
+    // Materials
+    var materialWireframe = new THREE.MeshLambertMaterial({
+      color: mdGrey, //material color
       wireframe: true,
       transparent: true,
       opacity: 0.4
     });
+    var materialShiny = new THREE.MeshPhongMaterial({
+      // depthTest: false,
+      color: dark, //material color
+      shading: THREE.FlatShading,
+      shininess: 100,
+      specular: pop,
+      // wireframe: true,
+      // emissive: dark
+    });
+    var material = new THREE.MeshPhongMaterial({
+      // depthTest: false,
+      color: dark, //material color
+      shading: THREE.FlatShading,
+      shininess: 70,
+      specular: pop,
+      // wireframe: true,
+      // emissive: dark
+    });
 
+//If mySphereCanvas exists render the sphere
 if (mySphereCanvas) {
   var sphereRenderer,
   sceneSphere;
+
+  window.addEventListener("resize", function() {
+    sphereRenderer.setSize( window.innerWidth, window.innerHeight );
+    camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 1000 );
+  });
 
   // sphereRenderer
   sphereRenderer = new THREE.WebGLRenderer({antialias: true});
   sphereRenderer.setSize( window.innerWidth, window.innerHeight);
   mySphereCanvas.appendChild( sphereRenderer.domElement );
-  sphereRenderer.setClearColor(0x191919); //Background color of canvas
+  sphereRenderer.setClearColor(dark); //Background color of sphere canvas
   sphereRenderer.setPixelRatio(window.devicePixelRatio);
 
   //Scene
@@ -43,7 +70,7 @@ if (mySphereCanvas) {
   var sphere = new THREE.SphereGeometry( 80, 10, 10 );
 
   // Creating and adding shapes
-  var sphere = new THREE.Mesh( sphere, material );
+  var sphere = new THREE.Mesh( sphere, materialWireframe ); //change sphere material here
   sphere.position.z = -500;
   sceneSphere.add( sphere );
 
@@ -58,16 +85,70 @@ if (mySphereCanvas) {
 
 }
 
+//If myCubeCanvas exists render the sphere
+if (myCubeCanvas) {
+  var cubeRenderer,
+  sceneCube;
 
+  window.addEventListener("resize", function() {
+    cubeRenderer.setSize( window.innerWidth, window.innerHeight );
+    camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 1000 );
+  });
+
+  // cubeRenderer
+  cubeRenderer = new THREE.WebGLRenderer({antialias: true});
+  cubeRenderer.setSize( window.innerWidth, window.innerHeight);
+  myCubeCanvas.appendChild( cubeRenderer.domElement );
+  cubeRenderer.setClearColor(dark); //Background color of cube canvas
+  cubeRenderer.setPixelRatio(window.devicePixelRatio);
+
+  //Scene
+  sceneCube = new THREE.Scene();
+
+  // Lights
+  var lightCube = new THREE.AmbientLight(0xffffff, 0.5);
+  sceneCube.add(lightCube);
+  var light2Cube = new THREE.PointLight(0xffffff, 0.5);
+  sceneCube.add(light2Cube);
+
+  //Geometry
+  var cube = new THREE.CubeGeometry( 20, 20, 20, 20, 2, 2 );
+
+  // Creating and adding shapes
+  var cube = new THREE.Mesh( cube, materialWireframe ); //change cube material here
+  cube.position.z = -100;
+  sceneCube.add( cube );
+
+
+  function cubeRender() {
+    requestAnimationFrame( cubeRender );
+    cube.rotation.x += 0.007;
+    cube.rotation.y += 0.01;
+    cubeRenderer.render( sceneCube, camera );
+  }
+  cubeRender();
+
+}
+
+//If myTorusCanvas exists render the Torus Knot
 if (myTorusCanvas) {
   var torusRenderer,
   sceneTorus;
+
+  window.addEventListener("resize", function() {
+    torusRenderer.setSize( window.innerWidth, window.innerHeight );
+    camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 1000 );
+  });
+
+
+  // window.onresize = function() {
+  // }
 
   // torusRenderer
   torusRenderer = new THREE.WebGLRenderer({antialias: true});
   torusRenderer.setSize( window.innerWidth, window.innerHeight);
   myTorusCanvas.appendChild( torusRenderer.domElement );
-  torusRenderer.setClearColor(0x191919); //Background color of canvas
+  torusRenderer.setClearColor(dark); //Background color of canvas
   torusRenderer.setPixelRatio(window.devicePixelRatio);
 
   // Scene
@@ -80,10 +161,10 @@ if (myTorusCanvas) {
   sceneTorus.add(light2Torus);
 
   // Geometry
-  var torusKnotGeometry = new THREE.TorusKnotGeometry( 80, 15, 10, 60 );
+  var torusKnotGeometry = new THREE.TorusKnotGeometry( 70, 18, 10, 10 );
 
   // Creating and adding shapes
-  var torusKnot = new THREE.Mesh( torusKnotGeometry, material );
+  var torusKnot = new THREE.Mesh( torusKnotGeometry, materialShiny ); //change torus material here
   torusKnot.position.z = -500;
   sceneTorus.add( torusKnot );
 
