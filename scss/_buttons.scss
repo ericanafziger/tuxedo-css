@@ -1,49 +1,47 @@
-button {
-  font-family: 'Josefin Sans', sans-serif;
+button { //applies to all buttons 
+  font-family: $header-font;
   font-size: 1rem;
   height: 50px;
   font-weight: 500;
   padding: 15px 40px;
+  margin-bottom: 20px;
   transition: background ease-in-out 200ms, border ease-in-out 200ms;
   &:hover, &:focus {
     cursor: pointer;
     outline: none;
   }
 }
-.btn-light {
+.btn-light { //btn-light styling
   color: $dark;
   background: $light;
   border: 2px solid $light;
   &:hover {
-    background: $dark;
-    border-color: $dark;
-    color: $light;
+    background: darken($light, 10%);
+    border-color: darken($light, 10%);
   }
 }
-.btn-dark {
+.btn-dark {//btn-dark styling
   color: $light;
   background: $dark;
   border: 2px solid $dark;
   &:hover {
-    background: $light;
-    border-color: $light;
-    color: $dark;
+    background: lighten($dark, 20%);
+    border-color: lighten($dark, 20%);
   }
 }
-.btn-pop {
+.btn-pop {//btn-pop styling
   color: $light;
   background: $color-pop;
   border: 2px solid $color-pop;
   &:hover {
-    background: $light;
-    border-color: $light;
-    color: $dark;
+    background: darken($color-pop, 10%);
+    border-color: darken($color-pop, 10%);
   }
 }
-[class*="btn-ghost"] {
+[class*="btn-ghost"] { //applies to all btn-ghost
   background: none;
 }
-.btn-ghost-light {
+.btn-ghost-light { //btn-ghost-light styling
   border: 2px solid $light;
   color: $light;
   &:hover {
@@ -51,7 +49,7 @@ button {
     color: $dark;
   }
 }
-.btn-ghost-dark {
+.btn-ghost-dark { //btn-ghost-dark styling
   border: 2px solid $dark;
   color: $dark;
   &:hover {
@@ -59,12 +57,12 @@ button {
     color: $light;
   }
 }
-.btn-ghost-pop {
+.btn-ghost-pop { //btn-ghost-pop styling
   border: 2px solid $color-pop;
   color: $color-pop;
   &:hover {
-    border: 2px solid $light;
-    background: $light;
-    color: $dark;
+    border: 2px solid $color-pop;
+    background: $color-pop;
+    color: $light;
   }
 }

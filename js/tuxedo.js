@@ -5,14 +5,15 @@ $(document).ready(function() {
     $(window).scroll( function(){
 
       /* Check the location of each animate-in elements */
-      $('.animate-in').each( function(i){
-        var bottom_of_object = $(this).offset().top + $(this).outerHeight() - 200;
-        var top_of_object = $(this).offset().top;
-        var bottom_of_window = $(window).scrollTop() + $(window).height();
+      $('.animate-in').each( function(){
+        var objectBottom = $(this).offset().top + $(this).outerHeight();
+        var windowBottom = $(window).scrollTop() + $(window).height();
 
         /* If the object is completely visible in the window, fade it it */
-        if( bottom_of_window > bottom_of_object ){
-          $(this).animate({'opacity':'1'},800);
+        if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+          if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
+        } else { //object goes out of view (scrolling up) fade out
+          if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
         }
       });
     });
