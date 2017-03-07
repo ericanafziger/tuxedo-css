@@ -762,6 +762,16 @@ textarea {
 [type="radio"]:disabled + label {
   color: #9B9B9B; }
 
+footer {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  background: #F4F4F4; }
+
 .bg-dark {
   background: #191919; }
 
