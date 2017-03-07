@@ -1,9 +1,9 @@
 // These following two rules apply to both basic grid and flex grid
 .container {
-  max-width: 1080px;
+  max-width: 1200px; //change how wide container is allowed to go
   width: 100%;
   margin: auto;
-  padding: 40px 0;
+  padding: 40px 30px;
 }
 
 // =========== Basic Grid Rules for 12-column grid ========= //
@@ -86,7 +86,7 @@ $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
 }
 
 [class*="f-col"] {
-  padding: 20px;
+  padding: 10px 20px;
   flex-direction: column;
   margin: 5px; //gutter between each flexed column
 }
@@ -101,35 +101,6 @@ $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
 }
 .f-col-4 {
   flex: 4;
-}
-
-// flex helper classes to add to flexed columns
-[class*='flex-center'], [class*='flex-end'] {
-  display: flex;
-}
-.flex-center {
-  justify-content: center;
-  align-items: center;
-}
-.flex-center-h {
-  align-items: center;
-  justify-content: flex-start;
-}
-.flex-center-v {
-  justify-content: center;
-  align-items: flex-start;
-}
-.flex-end-v {
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-.flex-end-h {
-  align-items: flex-end;
-  justify-content: flex-start;
-}
-.flex-end {
-  justify-content: flex-end;
-  align-items: flex-end;
 }
 
 .responsive {

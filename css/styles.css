@@ -79,10 +79,10 @@ blockquote {
     font-size: 18px; }
 
 .container {
-  max-width: 1080px;
+  max-width: 1200px;
   width: 100%;
   margin: auto;
-  padding: 40px 0; }
+  padding: 40px 30px; }
 
 .row:before,
 .row:after {
@@ -152,7 +152,7 @@ blockquote {
   flex-wrap: wrap; }
 
 [class*="f-col"] {
-  padding: 20px;
+  padding: 10px 20px;
   flex-direction: column;
   margin: 5px; }
 
@@ -167,33 +167,6 @@ blockquote {
 
 .f-col-4 {
   flex: 4; }
-
-[class*='flex-center'], [class*='flex-end'] {
-  display: flex; }
-
-.flex-center {
-  justify-content: center;
-  align-items: center; }
-
-.flex-center-h {
-  align-items: center;
-  justify-content: flex-start; }
-
-.flex-center-v {
-  justify-content: center;
-  align-items: flex-start; }
-
-.flex-end-v {
-  justify-content: flex-end;
-  align-items: flex-start; }
-
-.flex-end-h {
-  align-items: flex-end;
-  justify-content: flex-start; }
-
-.flex-end {
-  justify-content: flex-end;
-  align-items: flex-end; }
 
 @media screen and (max-width: 500px) {
   .responsive .f-col-1, .responsive .f-col-2 {
