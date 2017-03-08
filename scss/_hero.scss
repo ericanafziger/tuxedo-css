@@ -40,6 +40,7 @@
     display: block;
     width: 100%;
     height: 100vh;
+    min-height:500px;
     object-fit: cover;
     @media screen and #{$mobile-landscape} {
         height: 170vh; //customize this height to control how large hero should be in landscape mode on mobile devices

@@ -6,7 +6,7 @@ $(document).ready(function() {
 
       /* Check the location of each animate-in elements */
       $('.animate-in').each( function(){
-        var objectBottom = $(this).offset().top + $(this).outerHeight();
+        var objectBottom = $(this).offset().top + $(this).outerHeight() - 200;
         var windowBottom = $(window).scrollTop() + $(window).height();
 
         /* If the object is completely visible in the window, fade it it */
