@@ -1,8 +1,8 @@
 .hero {
   position: relative;
   font-family: $header-font;
-  min-height: 100vh;
-  height: auto;
+  height: 100vh;
+  min-height: 500px; //change the minimum height for hero
   &-content {
     max-width: 1080px;
     width: 100%;
@@ -10,12 +10,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @media screen
-      and #{$mobile-landscape} {
-        top: 100px;
-        height: auto;
-        transform: translate(-50%, 0);
-      }
   }
   header {
     width: 70%;

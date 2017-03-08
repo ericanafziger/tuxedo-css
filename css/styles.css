@@ -187,8 +187,8 @@ ul {
 .hero {
   position: relative;
   font-family: "Josefin Sans", sans-serif;
-  min-height: 100vh;
-  height: auto; }
+  height: 100vh;
+  min-height: 500px; }
   .hero-content {
     max-width: 1080px;
     width: 100%;
@@ -196,11 +196,6 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-    @media screen and (max-width: 760px) and (orientation: landscape) {
-      .hero-content {
-        top: 100px;
-        height: auto;
-        transform: translate(-50%, 0); } }
   .hero header {
     width: 70%;
     padding: 20px;
