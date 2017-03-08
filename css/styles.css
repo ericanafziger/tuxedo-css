@@ -8,7 +8,7 @@ body {
   font-size: 16px;
   line-height: 1; }
 
-h6, p, small {
+h6, p, small, ul {
   font-family: 'Lato', sans-serif;
   font-weight: lighter;
   letter-spacing: .5px; }
@@ -81,6 +81,12 @@ blockquote {
     font-style: normal;
     font-weight: normal;
     font-size: 18px; }
+
+ul {
+  list-style-position: inside;
+  padding-bottom: 20px; }
+  ul li {
+    padding: 5px 0; }
 
 .container {
   max-width: 1200px;

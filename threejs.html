@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuxedo CSS - Three JS</title>
+    <link rel="stylesheet" href="css/styles.css">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/tuxedo.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <nav class="nav-ghost-light"> 
+      <header> 
+        <img src="img/logo-thick-light.svg" alt="Tuxedo Logo"> 
+      </header>
+    	<ul class="menu-items"> 
+        <li class="f-col-1 flex-center"><a href="#">Get Started</a></li> 
+        <li class="f-col-1 flex-center dropdown"><a href="#">Docs +</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Animations</a></li>
+            <li><a href="#">Buttons</a></li>
+            <li><a href="#">Colors</a></li>
+          </ul>
+        </li> 
+        <li class="f-col-1 flex-center"><a href="#">About</a></li> 
+      </ul>
+    	<ul class="mobile-nav flex-center"> 
+        <div class="hamburger"></div> 
+      </ul>
+      <div class="flyout">
+    	  <div class="bar"> 
+          <header class="text-light f-col-4"> 
+            <img src="img/logo-thick-light.svg" alt="Tuxedo Logo"> 
+          </header> 
+          <div class="close f-col-1"></div> 
+        </div>
+        <ul class="flyout-menu"> 
+          <li><a href="#">Start</a></li> 
+          <li class="fly-dropdown"><a href="#">Docs +</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Animations</a></li>
+              <li><a href="#">Buttons</a></li>
+              <li><a href="#">Colors</a></li>
+              <li><a href="#">Fonts</a></li>
+              <li><a href="#">Forms</a></li>
+              <li><a href="#">Grid</a></li>
+              <li><a href="#">Hero</a></li>
+              <li><a href="#">Nav</a></li>
+            </ul>
+          </li> 
+          <li><a href="#">About</a></li> 
+        </ul>
+      </div>
+    </nav>
+
+    <div class="canvas-container">
+      <div id="three-torus"></div>
+      <div class="canvas-content text-light text-center">
+        <h1>Welcome</h1>
+        <h6 class="text-md-grey">
+          Your welcome message here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </h6>
+        <br>
+        <button type="button" class="btn-ghost-light" name="button">Get Started</button>
+      </div>
+    </div>
+    <div class="canvas-container">
+      <div id="three-cube"></div>
+      <div class="canvas-content text-light text-center">
+        <h1>Welcome</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+    </div>
+    <div class="canvas-container">
+      <div id="three-sphere"></div>
+      <div class="canvas-content text-light text-center">
+        <h1>Welcome</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+    </div>
+
+
+    <script src="js/three.js"></script>
+    <script src="js/three-render.js"></script>
+  </body>
+</html>
