@@ -1,36 +1,21 @@
 # [Tuxedo CSS](https://github.com/ericanafziger/tuxedo-css)
-Tuxedo is modern, simplified framework designed to bring some class to your app.
+Tuxedo is modern, simplified framework designed to bring class to your app.
 
 ## Getting started
 
 There are a couple ways to download and begin working with Tuxedo:
-- [Download the zip - not yet available]
-- Clone the repo: `git clone https://github.com/ericanafziger/tuxedo-css` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download)
+- [Download the full zip - not yet available] - this feature will be available on the Tuxedo Documentaion site
+- [Download just the parts of the framework you need] - this feature will be available on the Tuxedo Documentaion site
+- Clone the repo: `git clone https://github.com/ericanafziger/tuxedo-css` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download which is coming soon!)
 
 
-### What's in the download?
+### Project structure
 
-The download includes Skeleton's CSS, Normalize CSS as a reset, a sample favicon, and an index.html as a starting point.
-
-```
-Tuxedo/
-├── index.html
-├── css/
-│   ├── tuxedo.min.css
-│   └── tuxedo.css
-└── js/
-    └── tuxedo.js
-
-```
-
-## Browser support
-
-- Chrome latest
-<!-- - Firefox latest
-- Opera latest
-- Safari latest
-- IE latest -->
-
+The download includes Tuxedo's:
+* SCSS files
+* JavaScript
+* An index.html as a starting point
+* And several other example html pages
 
 ## License
 
@@ -44,4 +29,4 @@ Tuxedo was built using Atom and designed with [Sketch](http://bohemiancoding.com
 
 ## Acknowledgement
 
-Skeleton was created by [Erica Nafziger](https://github.com/ericanafziger).
+Tuxedo was created by [Erica Nafziger](https://github.com/ericanafziger). ©2017 All rights reserved.
