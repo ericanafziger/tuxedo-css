@@ -408,6 +408,7 @@ nav {
   width: 0; }
   @media screen and (max-width: 760px) {
     .mobile-nav {
+      width: auto;
       display: flex; } }
   .mobile-nav:hover {
     cursor: pointer; }
@@ -459,6 +460,8 @@ nav {
     .flyout-menu li a {
       text-transform: uppercase;
       font-size: 1.4rem; }
+  .flyout-menu .fly-dropdown:hover, .flyout-menu .sub-fly-dropdown:hover {
+    cursor: pointer; }
   .flyout-menu .fly-dropdown .dropdown-menu, .flyout-menu .sub-fly-dropdown .dropdown-menu {
     display: none;
     list-style: none; }
@@ -476,7 +479,7 @@ nav {
       border-top: 1px solid #f4f4f4;
       padding-top: 10px;
       list-style: none;
-      margin-left: 20px; }
+      padding-left: 20px; }
 
 .fly-dropdown .dropdown-menu {
   margin-top: 10px; }

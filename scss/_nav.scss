@@ -111,12 +111,13 @@ nav {
   display: none;
   width: 0;
   @media screen and #{$tablet} {
+    width: auto;
     display: flex;
   }
   &:hover {
     cursor: pointer;
   }
-  .hamburger {
+  .hamburger { //three bars that display to trigger mobile menu
     display: none;
     position: relative;
     background: url('data:image/svg+xml;utf8,<svg width="27px" height="21px" viewBox="299 11 27 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" fill="none" transform="translate(301.000000, 13.000000)" stroke-linecap="round" stroke-width="1" fill-rule="evenodd"><g id="Nav/Menu" stroke="#F4F4F4"><path d="M0.409326823,1.5 L22.5119031,1.5" stroke-width="3"></path><path d="M0.409326823,8.5 L22.5119031,8.5" stroke-width="3"></path><path d="M0.409326823,15.5 L22.5119031,15.5" stroke-width="3"></path></g></g></svg>');
@@ -129,21 +130,21 @@ nav {
     }
   }
 }
-.flyout {
+.flyout { //styling for mobile flyout to display mobile menu
   position: fixed;
   z-index: 5;
   display: none;
   overflow: auto;
-  background-image: linear-gradient(-180deg, transparentize($dark, 0) 20%, transparentize($dark, 0.1) 100%); //color of flyout menu
+  background-image: linear-gradient(-180deg, transparentize($dark, 0) 20%, transparentize($dark, 0.1) 100%); //color gradient for flyout menu
   width: 100%;
   height: 100vh;
-  .bar {
+  .bar { //bar at top of mobile flyout
     display: flex;
     height: 60px;
     width: 100%;
     background: $dark;
     padding-left: 5px;
-    .close {
+    .close { //styling for x icon that closes mobile flyout
       flex: 1;
       z-index: 5;
       background: url('data:image/svg+xml;utf8, <svg width="19px" height="19px" viewBox="-1 -1 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Nav/Menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M0.65145077,0.6658667 L16.2803323,16.2947482" stroke="#F4F4F4" stroke-width="3"></path>
@@ -156,7 +157,7 @@ nav {
     }
   }
 }
-.flyout-menu {
+.flyout-menu { //styling of flyout menu items
   margin: 20px 0 40px 0;
   list-style: none;
   li {
@@ -171,7 +172,10 @@ nav {
       font-size: 1.4rem;
     }
   }
-  .fly-dropdown, .sub-fly-dropdown {
+  .fly-dropdown, .sub-fly-dropdown { //styling of flyout menu dropdowns
+    &:hover {
+      cursor: pointer;
+    }
     .dropdown-menu {
       display: none;
       list-style: none;
@@ -186,12 +190,12 @@ nav {
           line-height: 2rem;
         }
       }
-      .sub-dropdown-menu {
+      .sub-dropdown-menu { //styling of nested dropdown menu
         display: none;
         border-top: 1px solid $light;
         padding-top: 10px;
         list-style: none;
-        margin-left: 20px;
+        padding-left: 20px;
       }
     }
   }

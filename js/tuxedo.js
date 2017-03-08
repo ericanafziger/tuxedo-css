@@ -18,6 +18,8 @@ $(document).ready(function() {
       });
     });
   }
+
+  //=================Mobile menu functionality=============//
   function mobileMenu() {
     $('.hamburger').click(function() {
       $('.flyout').show();
