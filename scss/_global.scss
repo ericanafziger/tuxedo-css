@@ -13,6 +13,8 @@ $color-pop: #2A7F62; //change global 'color-pop'
 
 //Define font family for header and body font. Must already be imported above
 $header-font: 'Josefin Sans', sans-serif;
+$body-font: 'Lato', sans-serif;
+
 %body-font {
   font-family: 'Lato', sans-serif;
   font-weight: lighter;

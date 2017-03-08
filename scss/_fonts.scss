@@ -79,11 +79,7 @@ blockquote {
   }
 }
 ul {
-  @extend %body-font;
+  font-family: $body-font;
+  font-weight: lighter;
   list-style-position: inside;
-  padding-bottom: 20px;
-  li {
-    padding: 5px 0;
-
-  }
 }
