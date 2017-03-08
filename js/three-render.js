@@ -30,15 +30,8 @@ var camera,
       // wireframe: true,
       // emissive: dark
     });
-    var material = new THREE.MeshPhongMaterial({
-      // depthTest: false,
-      color: dark, //material color
-      shading: THREE.FlatShading,
-      shininess: 70,
-      specular: pop,
-      // wireframe: true,
-      // emissive: dark
-    });
+    var reflection = THREE.CubeTextureLoader( ['./img/palms-dark.png', './img/palms-dark.png','./img/palms-dark.png','./img/palms-dark.png','./img/palms-dark.png','./img/palms-dark.png',  ] );
+
 
 //If mySphereCanvas exists render the sphere
 if (mySphereCanvas) {
@@ -170,8 +163,9 @@ if (myTorusCanvas) {
 
   function torusRender() {
     requestAnimationFrame( torusRender );
-    torusKnot.rotation.x += 0.007;
-    torusKnot.rotation.y += 0.01;
+    torusKnot.rotation.x -= 0.007;
+    torusKnot.rotation.y -= 0.01;
+    // torusKnot.rotation.z -= 0.007;
     torusRenderer.render( sceneTorus, camera );
   }
   torusRender();
