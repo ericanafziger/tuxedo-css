@@ -1,4 +1,4 @@
-button { //applies to all buttons 
+button {
   font-family: $header-font;
   font-size: 1rem;
   height: 50px;
@@ -11,7 +11,7 @@ button { //applies to all buttons
     outline: none;
   }
 }
-.btn-light { //btn-light styling
+.btn-light {
   color: $dark;
   background: $light;
   border: 2px solid $light;
@@ -20,7 +20,7 @@ button { //applies to all buttons
     border-color: darken($light, 10%);
   }
 }
-.btn-dark {//btn-dark styling
+.btn-dark {
   color: $light;
   background: $dark;
   border: 2px solid $dark;
@@ -29,7 +29,7 @@ button { //applies to all buttons
     border-color: lighten($dark, 20%);
   }
 }
-.btn-pop {//btn-pop styling
+.btn-pop {
   color: $light;
   background: $color-pop;
   border: 2px solid $color-pop;
@@ -38,10 +38,10 @@ button { //applies to all buttons
     border-color: darken($color-pop, 10%);
   }
 }
-[class*="btn-ghost"] { //applies to all btn-ghost
+[class*="btn-ghost"] {
   background: none;
 }
-.btn-ghost-light { //btn-ghost-light styling
+.btn-ghost-light {
   border: 2px solid $light;
   color: $light;
   &:hover {
@@ -49,7 +49,7 @@ button { //applies to all buttons
     color: $dark;
   }
 }
-.btn-ghost-dark { //btn-ghost-dark styling
+.btn-ghost-dark {
   border: 2px solid $dark;
   color: $dark;
   &:hover {
@@ -57,7 +57,7 @@ button { //applies to all buttons
     color: $light;
   }
 }
-.btn-ghost-pop { //btn-ghost-pop styling
+.btn-ghost-pop {
   border: 2px solid $color-pop;
   color: $color-pop;
   &:hover {

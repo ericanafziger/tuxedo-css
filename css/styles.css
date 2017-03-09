@@ -230,7 +230,8 @@ ul {
 
 .hero-slideshow {
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  min-height: 500px; }
   .hero-slideshow .images img {
     position: absolute;
     top: 0;
@@ -241,13 +242,14 @@ ul {
     height: 100vh;
     display: block;
     object-fit: cover;
+    min-height: 500px;
     transition: opacity ease-in-out 1s;
     opacity: 0; }
   .hero-slideshow .images .active {
     opacity: 1; }
   .hero-slideshow .hero-text {
     position: absolute;
-    z-index: 3;
+    z-index: 1;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); }
@@ -325,6 +327,9 @@ nav {
         display: none; } }
     nav .menu-items a, nav .menu-items li {
       margin: 0; }
+      nav .menu-items a .dropdown a:hover, nav .menu-items li .dropdown a:hover {
+        background: #262525;
+        color: #f4f4f4; }
       nav .menu-items a:hover, nav .menu-items li:hover {
         background: #f4f4f4;
         color: #262525;
@@ -421,7 +426,11 @@ nav {
         display: block; } }
 
 .flyout {
-  position: fixed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 5;
   display: none;
   overflow: auto;
@@ -479,6 +488,49 @@ nav {
 
 .fly-dropdown .dropdown-menu {
   margin-top: 10px; }
+
+.side-bar {
+  font-family: "Josefin Sans", sans-serif;
+  position: fixed;
+  overflow: auto;
+  height: 100vh;
+  padding: 60px;
+  max-width: 400px;
+  width: 40%; }
+  @media screen and (max-width: 760px) {
+    .side-bar {
+      display: none; } }
+  .side-bar img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    margin-bottom: 40px; }
+  .side-bar ul {
+    margin-top: 20px;
+    list-style: none;
+    color: #c8c8c8;
+    padding-bottom: 20px; }
+    .side-bar ul .active {
+      color: #f4f4f4;
+      text-decoration: underline; }
+    .side-bar ul a {
+      font-size: 1.3em;
+      line-height: 2em; }
+      .side-bar ul a:hover {
+        color: #f4f4f4; }
+
+.side-bar-content {
+  padding: 60px 5% 30px 450px;
+  margin: auto;
+  max-width: 1400px;
+  min-height: 100vh; }
+  @media screen and (max-width: 1015px) {
+    .side-bar-content {
+      padding-left: 45%; } }
+  @media screen and (max-width: 760px) {
+    .side-bar-content {
+      padding: 40px;
+      padding-top: 80px; } }
 
 .canvas-container {
   position: relative; }
@@ -834,13 +886,17 @@ textarea {
 
 footer {
   position: relative;
-  display: flex;
   justify-content: space-around;
   align-items: center;
   bottom: 0;
   width: 100%;
-  height: 65px;
+  min-height: 65px;
+  height: auto;
   background: #f4f4f4; }
+  @media screen and (max-width: 760px) {
+    footer {
+      height: auto;
+      min-height: 65px; } }
 
 .bg-dark {
   background: #262525; }

@@ -1,10 +1,14 @@
 footer {
   position: relative;
-  display: flex;
   justify-content: space-around;
   align-items: center;
   bottom: 0;
   width: 100%;
-  height: 65px;
+  min-height: 65px;
+  height: auto;
   background: $light-grey;
+  @media screen and #{$tablet} {
+    height: auto;
+    min-height: 65px;
+  }
 }

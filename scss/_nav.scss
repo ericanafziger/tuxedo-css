@@ -21,6 +21,10 @@ nav {
     }
     a, li {   //hover effect when nav links or dropdowns are selected
       margin: 0;
+      .dropdown a:hover { //override so dropdown links will not be effected by hover below
+        background: $dark;
+        color: $light;
+      }
       &:hover {
         background: $light;
         color: $dark;
@@ -68,9 +72,9 @@ nav {
   border-bottom: 2px solid $color-pop;
   color: $color-pop;
 }
-.dropdown {
+.dropdown { //styling of dropdown class
   position: relative;
-  .dropdown-menu {
+  .dropdown-menu { //styling of ul dropdown-menu
     display: none;
     list-style: none;
     position: absolute;
@@ -89,7 +93,7 @@ nav {
       }
     }
   }
-  .sub-dropdown-menu {
+  .sub-dropdown-menu { //for dropdown menu nested within a dropdown
     display: none;
     list-style: none;
     position: absolute;
@@ -131,7 +135,11 @@ nav {
   }
 }
 .flyout { //styling for mobile flyout to display mobile menu
-  position: fixed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 5;
   display: none;
   overflow: auto;
