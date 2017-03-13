@@ -1,5 +1,5 @@
 # [Tuxedo CSS](https://github.com/ericanafziger/tuxedo-css)
-Tuxedo is modern, simplified framework designed to bring class to your app. It is built using Sass, jQery, and has components built with three.js.
+Tuxedo is modern, simplified framework designed to bring class to your app. It is built using Sass, jQery, with selected components built with three.js.
 
 ## Getting started
 
