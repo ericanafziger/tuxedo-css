@@ -7,7 +7,7 @@ View the Tuxedo CSS documentation at:
 - [http://tuxedocss.us](http://tuxedocss.us)
 
 Download the files to get started:
-- [Download the full zip or partial files at http://tuxedocss.us/start.html](http://tuxedocss.us/start)
+- [Download the full zip or partial files at http://tuxedocss.us/start](http://tuxedocss.us/start)
 
 Clone this repository:
 - You can also clone this repository to get started. It comes with all the Sass and JavaScript files you need including those for the three.js components.
@@ -19,8 +19,7 @@ Clone this repository:
 The download includes Tuxedo's:
 * SCSS files
 * JavaScript
-* An index.html as a starting point
-* And several other example html pages
+* And an index.html as a starting point
 
 ## License
 
