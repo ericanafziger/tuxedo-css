@@ -1,13 +1,10 @@
 # [Tuxedo CSS](https://github.com/ericanafziger/tuxedo-css)
-Tuxedo is modern, simplified framework designed to bring class to your app.
+Tuxedo is modern, simplified framework designed to bring class to your app. It is built using Sass, jQery, and has components built with three.js.
 
 ## Getting started
 
-There are a couple ways to download and begin working with Tuxedo:
-- [Download the full zip - not yet available] - this feature will be available on the Tuxedo Documentaion site
-- [Download just the parts of the framework you need] - this feature will be available on the Tuxedo Documentaion site
-- Clone the repo: `git clone https://github.com/ericanafziger/tuxedo-css` (Note: this is under active development, so if you're looking for stable and safe, use the zipped download which is coming soon!)
-
+Visit the Tuxedo CSS documentation website to get started:
+- [Download the full zip at http://tuxedocss.us/start.html](http://tuxedocss.us/start.html)
 
 ### Project structure
 
