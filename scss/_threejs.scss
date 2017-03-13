@@ -1,5 +1,6 @@
 .canvas-container {
   position: relative;
+  min-height: 600px;
   .canvas-content {
     position: absolute;
     top: 50%;
@@ -11,6 +12,7 @@
 
 
 canvas {
+  min-height: 600px;
   display: block;
   max-width: 100%;
 }

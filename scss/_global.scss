@@ -1,12 +1,11 @@
 //change variables below to customize the tuxedo framework
 
 //colors
-$dark: #262525; //change global 'dark variable'
+$dark: #262525;
 $dark-grey: #5c5c5c;
 $md-grey: #c8c8c8;
-$light-grey: #f4f4f4;
-$light: #f4f4f4; //change global 'light variable'
-$color-pop: #2A7F62; //change global 'color-pop'
+$light: #f4f4f4;
+$color-pop: #2A7F62; 
 
 //fonts - to update, import a new font below
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100i,300,700,700i|Lato:300,400,700');

@@ -7,12 +7,6 @@
 }
 
 // =========== Basic Grid Rules for 12-column grid ========= //
-.row:before,
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
 
@@ -61,16 +55,6 @@ $column-gutter: 1%; // CHANGE COLUMN GUTTER HERE: must use %;
   width: 100% - ($column-gutter);
 }
 
-[class*='col-'] {
-  @media screen and #{$tablet} {
-    width: 50% - $column-gutter;
-  }
-}
-.col-12 {
-  @media screen and #{$tablet} {
-    width: 100% - $column-gutter;
-  }
-}
 [class*='col-'] {
   @media screen and #{$mobile} {
     width: 100%;

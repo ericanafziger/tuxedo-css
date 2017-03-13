@@ -75,7 +75,6 @@
   }
   .hero-text {
     position: absolute;
-    z-index: 1;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -85,7 +84,6 @@
   position: absolute;
   left: 0;
   top: 50%;
-  z-index: 3;
   background: url('data:image/svg+xml;utf8,<svg width="40px" height="40px" viewBox="4 0 9 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon id="Path-2" stroke="none" fill="#F4F4F4" fill-rule="evenodd" transform="translate(8.500000, 9.065085) rotate(-270.000000) translate(-8.500000, -9.065085) " points="-3.60600438e-13 5 17 5 8.5 13.1301693"></polygon></svg>');
   background-repeat: no-repeat;
   background-position: center;
@@ -99,7 +97,6 @@
   position: absolute;
   right: 0;
   top: 50%;
-  z-index: 3;
   background: url('data:image/svg+xml;utf8,<svg width="40px" height="40px" viewBox="4 0 9 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon id="Path-2" stroke="none" fill="#F4F4F4" fill-rule="evenodd" transform="translate(8.500000, 9.065085) rotate(-90.000000) translate(-8.500000, -9.065085) " points="-3.60600438e-13 5 17 5 8.5 13.1301693"></polygon></svg>');
   background-repeat: no-repeat;
   background-position: center;
@@ -114,7 +111,6 @@
   justify-content: center;
 }
 .circle {
-  z-index: 3;
   background: url('data:image/svg+xml;utf8,<svg width="15px" height="15px" viewBox="3 3 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle id="Oval-2" stroke="#F4F4F4" stroke-width="3" fill="none" cx="15.5" cy="15.5" r="10.5"></circle></svg>');
   background-repeat: no-repeat;
   background-position: center;
@@ -125,7 +121,6 @@
   }
 }
 .circle.active {
-  z-index: 3;
   background: url('data:image/svg+xml;utf8,<svg width="15px" height="15px" viewBox="3 3 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle id="Oval-2" stroke="#F4F4F4" stroke-width="3" fill="#f4f4f4" cx="15.5" cy="15.5" r="10.5"></circle></svg>');
   background-repeat: no-repeat;
   background-position: center;

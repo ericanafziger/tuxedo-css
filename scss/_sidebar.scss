@@ -1,0 +1,53 @@
+//================Side Bar Styling======//
+//follow code with RIGHT POSITIONED SIDEBAR to change sidebar to right side
+.side-bar {
+  font-family: $header-font;
+  position: fixed; //keeps sidebar in place despite scrolling
+  overflow: auto;
+  // right: 0;    //Uncomment for RIGHT POSITIONED SIDEBAR
+  height: 100vh; //keeps sidebar height fixed to height of viewport
+  padding: 60px;
+  max-width: 400px; //maximum width sidebar is allowed to expand
+  width: 40%;
+  @media screen and #{$tablet} { //sidebar is no longer visible at tablet screen size
+    display: none;
+  }
+  img { //styling for any images placed within the sidebar
+    display: block;
+    margin:auto;
+    max-width: 100%; //image will scale based on sidebar width
+    margin-bottom: 40px;
+  }
+  ul { //list of items inside sidebar
+    margin-top: 20px;
+    list-style: none;
+    color: $md-grey;
+    padding-bottom: 20px;
+    .active { //active class can be used to show which page is currently being visited
+      color: $light;
+      text-decoration: underline;
+    }
+    a {
+      font-size: 1.3em;
+      line-height: 2em;
+      &:hover {
+        color: $light;
+      }
+    }
+  }
+}
+.side-bar-content { //sidebar content
+  padding: 60px 5% 30px 450px; //keeps content from overlapping with sidebar
+  // padding: 60px 450px 30px 5%; //Uncomment for RIGHT POSITIONED SIDEBAR
+  margin: auto;
+  max-width: 1400px;
+  min-height: 100vh; //makes sidebar same height as viewport while still allowing for scrolling
+  @media screen and ('max-width: 1015px') { //when sidebar begins to scale down so does the contenet distance from sidebar
+    padding-left: 45%; //Comment out for RIGHT POSITIONED SIDEBAR
+    // padding-right: 45%;//Uncomment RIGHT POSITIONED SIDEBAR
+  }
+  @media screen and #{$tablet} { //when sidebar disappears content takes up whole screen and padding changes
+    padding: 40px;
+    padding-top: 80px; //separates side bar content from a fixed navbar
+  }
+}
