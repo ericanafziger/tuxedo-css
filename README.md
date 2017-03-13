@@ -4,7 +4,7 @@ Tuxedo is modern, simplified framework designed to bring class to your app. It i
 ## Getting started
 
 Visit the Tuxedo CSS documentation website to get started:
-- [Download the full zip at http://tuxedocss.us/start.html](http://tuxedocss.us/start.html)
+- [Download the full zip or partial files at http://tuxedocss.us/start.html](http://tuxedocss.us/start.html)
 
 ### Project structure
 
