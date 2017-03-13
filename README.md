@@ -3,11 +3,16 @@ Tuxedo is modern, simplified framework designed to bring class to your app. It i
 
 ## Getting started
 
-View the Tuxedo CSS documentation at: 
+View the Tuxedo CSS documentation at:
 - [http://tuxedocss.us](http://tuxedocss.us)
 
 Download the files to get started:
-- [Download the full zip or partial files at http://tuxedocss.us/start.html](http://tuxedocss.us/start.html)
+- [Download the full zip or partial files at http://tuxedocss.us/start.html](http://tuxedocss.us/start)
+
+Clone this repository:
+- You can also clone this repository to get started. It comes with all the Sass and JavaScript files you need including those for the three.js components.
+  * There are two index setups included - one with threejs and one without.
+  * Don't forget to set up a Sass watch to compile your Sass changes as CSS. [Find the instructions for getting started here](http://tuxedocss.us/start)
 
 ### Project structure
 
