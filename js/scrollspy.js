@@ -19,5 +19,14 @@ $(document).ready(function() {
   console.log(vars);
   $(window).scroll(function() {
     var windowTop = $(window).scrollTop();
+    for (var j = 1; j < stagesNumber; j++) {
+      console.log(vars['stageTop'+j]);
+      console.log(vars['stageTop'+(j+1)]);
+      debugger;
+      if (windowTop >= vars['stageTop'+j]) {
+      $('a[href*="#stage"]').removeClass('active');
+      $('a[href*="#stage"]' + j).addClass('active');
+      }
+    };
   });
 });
