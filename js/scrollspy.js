@@ -13,19 +13,21 @@ $(document).ready(function() {
   //scroll spy functionality
   var vars = {};
   var stagesNumber = $('[id*="stage"]').find().prevObject.length;
+  console.log(stagesNumber);
   for (var i = 1; i <= stagesNumber; i++) {
     vars['stageTop' + i] = $('#stage' + i).offset().top;
   }
   console.log(vars);
   $(window).scroll(function() {
-    var windowTop = $(window).scrollTop();
-    for (var j = 1; j < stagesNumber; j++) {
-      console.log(vars['stageTop'+j]);
-      console.log(vars['stageTop'+(j+1)]);
-      debugger;
-      if (windowTop >= vars['stageTop'+j]) {
-      $('a[href*="#stage"]').removeClass('active');
-      $('a[href*="#stage"]' + j).addClass('active');
+    var windowTop = $(window).scrollTop() + 350;
+    for (var j = 1; j <= stagesNumber; j++) {
+      console.log('windowTop: '+windowTop+ ' stage7: ' +vars.stageTop7);
+      if (windowTop >= (vars['stageTop'+j]) && windowTop < (vars['stageTop'+(j+1)])) {
+        $('a[href*="#stage"]').parent().removeClass('active');
+        $('a[href*="#stage'+j+'"]').parent().addClass('active');
+      } else if (windowTop >= (vars['stageTop'+stagesNumber])){
+        $('a[href*="#stage"]').parent().removeClass('active');
+        $('a[href*="#stage'+stagesNumber+'"]').parent().addClass('active');
       }
     };
   });
