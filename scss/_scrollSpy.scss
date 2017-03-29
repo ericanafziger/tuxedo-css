@@ -3,3 +3,9 @@
   padding-left: 5px;
   margin-left: -15px;
 }
+[id*="scrollSpy"] {
+  &:hover {
+    cursor: pointer;
+    color: $dark-grey;
+  }
+}
